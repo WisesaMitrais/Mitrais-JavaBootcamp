@@ -1,13 +1,13 @@
 package model;
 
-public class HackerRankProblem {
+public class ModelHackerRankProblem {
 
     private final int problemID;
     private final String problemCategory;
     private final String problemType;
     private final String pdfName;
 
-    public HackerRankProblem(int problemID, String problemCategory, String problemType, String pdfName) {
+    public ModelHackerRankProblem(int problemID, String problemCategory, String problemType, String pdfName) {
         this.problemID = problemID;
         this.problemCategory = problemCategory;
         this.problemType = problemType;
