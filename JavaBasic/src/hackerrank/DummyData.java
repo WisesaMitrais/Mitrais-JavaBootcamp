@@ -13,6 +13,7 @@ public class DummyData {
         "WU_DiagonalDifference", "WU_MiniMaxSum", "WU_PlusMinus", 
         "WU_SimpleArraySum", "WU_SolveMeFirst", "WU_Staircase", 
         "WU_TimeConversion"};
+    protected static final int TOTAL_PROBLEM = 10;
     
     public int[] getProblemId(){
         return PROBLEM_ID;

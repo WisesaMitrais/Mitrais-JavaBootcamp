@@ -19,10 +19,8 @@ public class JavaBasic {
         //Print array data.
         int index = 0;
         do{
-            System.out.println("Problem-ID: "+hackerRankProblemList[index].getProblemID()+
-                    ". Problem-Category: "+hackerRankProblemList[index].getProblemCategory()+
-                    ". Problem-Type: "+hackerRankProblemList[index].getProblemType()+
-                    ". PDF-Name: "+hackerRankProblemList[index].getPdfName());
+            hackerRankProblemList[index].printProblem();
+            System.out.println(hackerRankProblemList[index].getTotalProblem());
             index++;
         }while(index < 10);
     }
