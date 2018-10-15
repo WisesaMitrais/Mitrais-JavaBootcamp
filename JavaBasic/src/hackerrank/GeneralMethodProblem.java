@@ -1,6 +1,8 @@
 package hackerrank;
 
-public interface GeneralMethodProblem {
+public abstract class GeneralMethodProblem {
     
-    void printAllProblem(String problemType);
+    abstract void printAllProblem();
+    abstract void printAllProblem(String problemType);
+    abstract void printTotalProblem(String problemType);
 }

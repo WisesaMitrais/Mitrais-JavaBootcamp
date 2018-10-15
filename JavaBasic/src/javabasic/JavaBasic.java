@@ -8,6 +8,6 @@ public class JavaBasic{
         System.out.println("Java Basic Concept");
         
         AlgorithmProblem algorithmProblem = new AlgorithmProblem();
-        algorithmProblem.printAllProblem("Warmup");
+        algorithmProblem.printAllProblem("Constructive Algorithms");
     }
 }
