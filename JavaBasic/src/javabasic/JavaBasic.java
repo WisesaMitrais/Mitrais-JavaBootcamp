@@ -1,27 +1,13 @@
 package javabasic;
 
-import hackerrank.HackerRankProblem;
-import hackerrank.DummyData;
+import hackerrank.AlgorithmProblem;
 
-public class JavaBasic {
+public class JavaBasic{
 
     public static void main(String[] args) {
         System.out.println("Java Basic Concept");
         
-        DummyData dummyData = new DummyData();
-        HackerRankProblem[] hackerRankProblemList = new HackerRankProblem[10];
-        //Insert dummy data to array.
-        for(int index = 0; index <= 9; index++){
-            hackerRankProblemList[index] = new HackerRankProblem(
-            dummyData.getOneProblemId(index), dummyData.getOneProblemCategory(0),
-                dummyData.getOneProblemType(0), dummyData.getOnePDFName(index));
-        }
-        //Print array data.
-        int index = 0;
-        do{
-            hackerRankProblemList[index].printProblem();
-            System.out.println(hackerRankProblemList[index].getTotalProblem());
-            index++;
-        }while(index < 10);
+        AlgorithmProblem algorithmProblem = new AlgorithmProblem();
+        algorithmProblem.printAllProblem("Warmup");
     }
 }
