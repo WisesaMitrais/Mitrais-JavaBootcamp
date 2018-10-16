@@ -5,11 +5,9 @@ import java.util.Scanner;
 public class Warmup10 {
     
     private String timeConversion(String s) {
-        int len = s.length();
-        String hourDigit = s.charAt(0)+""+s.charAt(1);
-        String formatDigit = s.charAt(len-2)+""+s.charAt(len-1);
-        String sameDigit = s.charAt(2)+""+s.charAt(3)+""+s.charAt(4)+""+s.charAt(5)+""+s.charAt(6)+""+s.charAt(7);
-
+        String hourDigit = s.substring(0, 2);
+        String formatDigit = s.substring(s.length()-2, s.length());
+        String sameDigit = s.substring(2, 8);
         int hourDigitInt = Integer.parseInt(hourDigit);
         if(formatDigit.equals("PM")){
             if(hourDigitInt == 12){
@@ -22,7 +20,7 @@ public class Warmup10 {
             if(hourDigitInt == 12){
                 return "00" + sameDigit;
             }else{
-                return s.charAt(0) + "" + s.charAt(1) + "" + sameDigit;
+                return hourDigit + "" + sameDigit;
             }
         }
     }
