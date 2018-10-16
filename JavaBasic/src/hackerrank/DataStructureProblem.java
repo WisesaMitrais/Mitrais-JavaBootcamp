@@ -4,8 +4,8 @@ import hackerrank.dummydata.DataStructureArraysData;
 
 public class DataStructureProblem extends GeneralMethodProblem {
     
-    DataStructureArraysData dsad = new DataStructureArraysData();
-    HackerRankProblemModel[] dsadProblem = new HackerRankProblemModel[5];
+    private final DataStructureArraysData dsad = new DataStructureArraysData();
+    private final HackerRankProblemModel[] dsadProblem = new HackerRankProblemModel[10];
     
     public DataStructureProblem(){
         for(int index = 0; index < dsad.getTotalProblem(); index++){
@@ -16,17 +16,14 @@ public class DataStructureProblem extends GeneralMethodProblem {
     
     @Override
     public void printAllProblem() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        printProblem("Arrays", dsadProblem);
     }
 
     @Override
     public void printAllProblem(String problemType) {
-        System.out.println("Problem List of Data Structure "+problemType+":");
         switch(problemType){
             case "Arrays":
-                for(HackerRankProblemModel hrpm: dsadProblem){
-                    System.out.println(hrpm.getProblemID()+" - "+hrpm.getProblemName());
-                }
+                printProblem(problemType, dsadProblem);
                 break;
             default: System.out.println("Problem Type Not Found!");
         }
@@ -39,6 +36,21 @@ public class DataStructureProblem extends GeneralMethodProblem {
                 System.out.println(dsadProblem.length);
                 break;
             default: System.out.println("Problem Type Not Found!");
+        }
+    }
+    
+    private void printProblem(String problemType, HackerRankProblemModel[] hrpmList){
+        try{
+            System.out.println("Problem List of Data Structure "+problemType+":");
+            for(HackerRankProblemModel hrpm: hrpmList){
+                System.out.println(hrpm.getProblemID()+" - "+hrpm.getProblemName());
+            } 
+        }catch(ArrayIndexOutOfBoundsException ex){
+            System.out.println("ERROR, Array index out of bound!");
+        }catch(NullPointerException ex){
+            System.out.println("ERROR, Array index(s) is null");
+        }finally{
+            System.out.println("Please fix the error soon!!");
         }
     }
 }

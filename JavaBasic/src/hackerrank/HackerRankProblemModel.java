@@ -32,6 +32,10 @@ public class HackerRankProblemModel {
     public String getProblemCategory() {
         return this.problemCategory;
     }
+    
+    public boolean getIsSolved(){
+        return this.isSolved;
+    }
 
     public void setIsSolved(boolean isSolved) {
         this.isSolved = isSolved;

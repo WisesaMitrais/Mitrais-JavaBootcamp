@@ -4,10 +4,10 @@ import hackerrank.dummydata.*;
 
 public class AlgorithmProblem extends GeneralMethodProblem {
     
-    AlgorithmWarmupData awd = new AlgorithmWarmupData();
-    AlgorithmConstructiveAlgorithmsData acad = new AlgorithmConstructiveAlgorithmsData();
-    HackerRankProblemModel[] awdProblem = new HackerRankProblemModel[10];
-    HackerRankProblemModel[] acadProblem = new HackerRankProblemModel[11];
+    private final AlgorithmWarmupData awd = new AlgorithmWarmupData();
+    private final AlgorithmConstructiveAlgorithmsData acad = new AlgorithmConstructiveAlgorithmsData();
+    private final HackerRankProblemModel[] awdProblem = new HackerRankProblemModel[10];
+    private final HackerRankProblemModel[] acadProblem = new HackerRankProblemModel[11];
     
     public AlgorithmProblem(){
         for(int index = 0; index < awd.getTotalProblem(); index++){
@@ -22,29 +22,18 @@ public class AlgorithmProblem extends GeneralMethodProblem {
     
     @Override
     public void printAllProblem() {
-        System.out.println("Problem List of Algorithm Warmup:");
-        for(HackerRankProblemModel hrpm: awdProblem){
-            System.out.println(hrpm.getProblemID()+" - "+hrpm.getProblemName());
-        }
-        System.out.println("Problem List of Algorithm Constructive Algorithms:");
-        for(HackerRankProblemModel hrpm: acadProblem){
-            System.out.println(hrpm.getProblemID()+" - "+hrpm.getProblemName());
-        }
+        printProblem("Warmup", awdProblem);
+        printProblem("Constructive Algorithms", acadProblem);
     }
 
     @Override
     public void printAllProblem(String problemType) {
-        System.out.println("Problem List of Algorithm "+problemType+":");
         switch(problemType){
             case "Warmup":
-                for(HackerRankProblemModel hrpm: awdProblem){
-                    System.out.println(hrpm.getProblemID()+" - "+hrpm.getProblemName());
-                }
+                printProblem(problemType, awdProblem);
                 break;
             case "Constructive Algorithms":
-                for(HackerRankProblemModel hrpm: acadProblem){
-                    System.out.println(hrpm.getProblemID()+" - "+hrpm.getProblemName());
-                }
+                printProblem(problemType, acadProblem);
                 break;
             default: System.out.println("Problem Type Not Found!");
         }
@@ -60,6 +49,19 @@ public class AlgorithmProblem extends GeneralMethodProblem {
                 System.out.println(acadProblem.length);
                 break;
             default: System.out.println("Problem Type Not Found!");
+        }
+    }
+    
+    private void printProblem(String problemType, HackerRankProblemModel[] hrpmList){
+        try{
+            System.out.println("Problem List of Algorithm "+problemType+":");
+            for(HackerRankProblemModel hrpm: hrpmList){
+                System.out.println(hrpm.getProblemID()+" - "+hrpm.getProblemName());
+            } 
+        }catch(ArrayIndexOutOfBoundsException ex){
+            System.out.println("Array index out of bound!");
+        }finally{
+            System.out.println("Please fix the error soon!!");
         }
     }
 }

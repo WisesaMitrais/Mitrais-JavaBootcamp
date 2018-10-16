@@ -1,13 +1,13 @@
 package javabasic;
 
-import hackerrank.AlgorithmProblem;
+import hackerrank.*;
 
 public class JavaBasic{
 
     public static void main(String[] args) {
         System.out.println("Java Basic Concept");
         
-        AlgorithmProblem algorithmProblem = new AlgorithmProblem();
-        algorithmProblem.printAllProblem("Constructive Algorithms");
+        DataStructureProblem dsp = new DataStructureProblem();
+        dsp.printAllProblem("Arrays");
     }
 }
