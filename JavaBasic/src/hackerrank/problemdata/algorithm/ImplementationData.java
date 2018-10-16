@@ -1,18 +1,17 @@
-package hackerrank.dummydata;
+package hackerrank.problemdata.algorithm;
 
-public class AlgorithmWarmupData implements DummyData{
+import hackerrank.problemdata.ProblemData;
 
-    private static final int[] PROBLEM_ID = {
-        11301, 11302, 11303, 11304, 11305, 11306, 11307, 11308, 11309, 11310};
-    private static final String[] PROBLEM_NAME = {
-        "AL_WU_AVeryBigSum", "AL_WU_BirthdayCakeCandles", "AL_WU_CompareTheTriplets", 
-        "AL_WU_DiagonalDifference", "AL_WU_MiniMaxSum", "AL_WU_PlusMinus", 
-        "AL_WU_SimpleArraySum", "AL_WU_SolveMeFirst", "AL_WU_Staircase", 
-        "AL_WU_TimeConversion"};
-    private static final String PROBLEM_TYPE = "Warmup";
-    private static final String PROBLEM_CATEGORY = "Algorithm";
-    private static final int TOTAL_PROBLEM = 10;
+public class ImplementationData implements ProblemData {
     
+    private static final int[] PROBLEM_ID = {
+        10201, 10202, 10203};
+    private static final String[] PROBLEM_NAME = {
+        "AL_IM_GradingStudents", "AL_IM_AppleAndOrange", "AL_IM_Kangaroo"};
+    private static final String PROBLEM_TYPE = "Implementation";
+    private static final String PROBLEM_CATEGORY = "Algorithm";
+    private static final int TOTAL_PROBLEM = 3;
+
     @Override
     public int getOneProblemId(int index) {
         index = (index >= 0 && index < TOTAL_PROBLEM) ? PROBLEM_ID[index] : 99;

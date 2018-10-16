@@ -1,11 +1,12 @@
 package hackerrank;
 
-import hackerrank.dummydata.*;
+import hackerrank.problemdata.algorithm.ImplementationData;
+import hackerrank.problemdata.algorithm.WarmupData;
 
 public class AlgorithmProblem extends GeneralMethodProblem {
     
-    private final AlgorithmWarmupData awd = new AlgorithmWarmupData();
-    private final AlgorithmConstructiveAlgorithmsData acad = new AlgorithmConstructiveAlgorithmsData();
+    private final WarmupData awd = new WarmupData();
+    private final ImplementationData acad = new ImplementationData();
     private final HackerRankProblemModel[] awdProblem = new HackerRankProblemModel[10];
     private final HackerRankProblemModel[] acadProblem = new HackerRankProblemModel[11];
     
@@ -60,8 +61,8 @@ public class AlgorithmProblem extends GeneralMethodProblem {
             } 
         }catch(ArrayIndexOutOfBoundsException ex){
             System.out.println("Array index out of bound!");
-        }finally{
-            System.out.println("Please fix the error soon!!");
+        }catch(NullPointerException ex){
+            System.out.println("ERROR, Array index(s) is null");
         }
     }
 }

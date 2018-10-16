@@ -1,11 +1,11 @@
 package hackerrank;
 
-import hackerrank.dummydata.DataStructureArraysData;
+import hackerrank.problemdata.datastructure.ArraysData;
 
 public class DataStructureProblem extends GeneralMethodProblem {
     
-    private final DataStructureArraysData dsad = new DataStructureArraysData();
-    private final HackerRankProblemModel[] dsadProblem = new HackerRankProblemModel[10];
+    private final ArraysData dsad = new ArraysData();
+    private final HackerRankProblemModel[] dsadProblem = new HackerRankProblemModel[5];
     
     public DataStructureProblem(){
         for(int index = 0; index < dsad.getTotalProblem(); index++){
@@ -49,8 +49,6 @@ public class DataStructureProblem extends GeneralMethodProblem {
             System.out.println("ERROR, Array index out of bound!");
         }catch(NullPointerException ex){
             System.out.println("ERROR, Array index(s) is null");
-        }finally{
-            System.out.println("Please fix the error soon!!");
         }
     }
 }

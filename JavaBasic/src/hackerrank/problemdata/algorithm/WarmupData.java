@@ -1,16 +1,20 @@
-package hackerrank.dummydata;
+package hackerrank.problemdata.algorithm;
 
-public class DataStructureArraysData implements DummyData {
-    
+import hackerrank.problemdata.ProblemData;
+
+public class WarmupData implements ProblemData{
+
     private static final int[] PROBLEM_ID = {
-        20201, 20202, 20203, 20204, 20205};
+        11301, 11302, 11303, 11304, 11305, 11306, 11307, 11308, 11309, 11310};
     private static final String[] PROBLEM_NAME = {
-        "DS_AR_2DArrayDS", "DS_AR_ArrayDS", "DS_AR_ArrayManipulation", 
-        "DS_AR_DynamicArray", "DS_AR_LeftRotation"};
-    private static final String PROBLEM_TYPE = "Arrays";
-    private static final String PROBLEM_CATEGORY = "Data Structure";
-    private static final int TOTAL_PROBLEM = 5;
-
+        "AL_WU_SolveMeFirst", "AL_WU_SimpleArraySum", "AL_WU_CompareTheTriplets", 
+        "AL_WU_AVeryBigSum", "AL_WU_DiagonalDifference", "AL_WU_PlusMinus", 
+        "AL_WU_Staircase", "AL_WU_MiniMaxSum", "AL_WU_BirthdayCakeCandles", 
+        "AL_WU_TimeConversion"};
+    private static final String PROBLEM_TYPE = "Warmup";
+    private static final String PROBLEM_CATEGORY = "Algorithm";
+    private static final int TOTAL_PROBLEM = 10;
+    
     @Override
     public int getOneProblemId(int index) {
         index = (index >= 0 && index < TOTAL_PROBLEM) ? PROBLEM_ID[index] : 99;

@@ -1,6 +1,6 @@
-package hackerrank.dummydata;
+package hackerrank.problemdata;
 
-interface DummyData {
+public interface ProblemData {
     
     int getOneProblemId(int index);
     String getOneProblemName(int index);

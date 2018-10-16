@@ -1,17 +1,17 @@
-package hackerrank.dummydata;
+package hackerrank.problemdata.datastructure;
 
-public class AlgorithmConstructiveAlgorithmsData implements DummyData {
+import hackerrank.problemdata.ProblemData;
+
+public class ArraysData implements ProblemData {
     
     private static final int[] PROBLEM_ID = {
-        10201, 10202, 10203, 10204, 10205, 10206, 10207, 10208, 10209, 10210, 10211};
+        20201, 20202, 20203, 20204, 20205};
     private static final String[] PROBLEM_NAME = {
-        "AL_CA_ArrayConstruction", "AL_CA_Beautiful3Set", "AL_CA_Bonetrousle", 
-        "AL_CA_FlippingTheMatrix", "AL_CA_GamingArray", "AL_CA_InverseRMQ", 
-        "AL_CA_LenaSort", "AL_CA_LovelyTriplets", "AL_CA_NewYearChaos", 
-        "AL_CA_TwoSubarrays", "AL_CA_YetAnotherKMPProblem"};
-    private static final String PROBLEM_TYPE = "Constructive Algorithms";
-    private static final String PROBLEM_CATEGORY = "Algorithm";
-    private static final int TOTAL_PROBLEM = 11;
+        "DS_AR_ArrayDS", "DS_AR_2DArrayDS", "DS_AR_DynamicArray", 
+        "DS_AR_LeftRotation", "DS_AR_SparseArrays"};
+    private static final String PROBLEM_TYPE = "Arrays";
+    private static final String PROBLEM_CATEGORY = "Data Structure";
+    private static final int TOTAL_PROBLEM = 5;
 
     @Override
     public int getOneProblemId(int index) {
