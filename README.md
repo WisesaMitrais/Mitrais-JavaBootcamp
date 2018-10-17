@@ -1,12 +1,11 @@
 # Mitrais-JavaBootcamp (October 2018 - Now)
 This repository contain the result of exploring java technology within Mitrais java bootcamp.
-
 ## Module Java Fundamental 1
 ### Task Overview | 10/10/2018 (40 minutes)
 Keypoints :
 1. Understand Java is a platform not just language
 2. Able to explain JDK, JRE, JVM
-### Task Java Basic | 10/10/2018 - 15/10/2018 (4 days)
+### Task Java Basic | 10/10/2018 - 15/10/2018 (3 days 3 hours)
 Keypoints :
 1. Able to use variable
 2. Undestand structure of class
@@ -33,11 +32,10 @@ Keypoints :
 Keypoints :
 1. Understand different tipes of Date Time API (LocalDate, LocalTime, LocalDateTime, DateTime, Period, Duration, Instant)
 2. Understand date time manipulation (parsing, formatting, addition, substraction)
-### Task Collection API | 16/10/2018 - 17/10/2018 (2 days)
+### Task Collection API | 16/10/2018 - 17/10/2018 (1 days 2 hours)
 Keypoints :
 1. Understand usage of List, Set, Map, Stack and their implementations
 2. Able to manipulate collection (addtition, filtering, removing, sorting)
-
 ## Module Java Fundamental 2
 ### Task Java Class Design | 17/10/2018 - Now
 Keypoints :
