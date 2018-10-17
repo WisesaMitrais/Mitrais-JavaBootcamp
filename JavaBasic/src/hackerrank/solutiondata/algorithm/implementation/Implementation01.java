@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Implementation01 {
 
-    public int[] solve(int[] grades, int n){
+    private int[] gradingStudents(int[] grades, int n){
         for(int i = 0; i < n; i++){
             if(grades[i] >= 38){
                 if((grades[i] - 3) % 5 == 0){
@@ -24,7 +24,7 @@ public class Implementation01 {
         for(int grades_i=0; grades_i < n; grades_i++){
             grades[grades_i] = in.nextInt();
         }
-        int[] result = solve(grades, n);
+        int[] result = gradingStudents(grades, n);
         for (int i = 0; i < result.length; i++) {
             System.out.print(result[i] + (i != result.length - 1 ? "\n" : ""));
         }
