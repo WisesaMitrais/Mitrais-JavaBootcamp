@@ -4,18 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Arrays03 {
-
-    public void solution(){
-        Scanner scan = new Scanner(System.in);
-        int N = scan.nextInt();
-        int Q = scan.nextInt();
-        int Query[][] = new int[Q][3];
-        for(int idx = 0; idx < Q; idx++){
-            Query[idx][0] = scan.nextInt();
-            Query[idx][1] = scan.nextInt();
-            Query[idx][2] = scan.nextInt();
-        }
-
+    
+    private void dynamicArray(int N, int Q, int[][] Query){
         int lastAnswer = 0;
         ArrayList[] seqList = new ArrayList[N];
         int seq, value;
@@ -32,5 +22,18 @@ public class Arrays03 {
                 System.out.println(lastAnswer);
             }
         }
+    }
+
+    public void solution(){
+        Scanner scan = new Scanner(System.in);
+        int N = scan.nextInt();
+        int Q = scan.nextInt();
+        int[][] Query = new int[Q][3];
+        for(int i = 0; i < Q; i++){
+            for(int j = 0; j < 3; j++){
+                Query[i][j] = scan.nextInt();
+            }
+        }
+        dynamicArray(N, Q, Query);
     }
 }

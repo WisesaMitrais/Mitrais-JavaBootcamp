@@ -3,6 +3,15 @@ package hackerrank.solutiondata.datastructure.arrays;
 import java.util.Scanner;
 
 public class Arrays05 {
+    
+    private int[] sparseArray(int Q, int N, String[] strings, String[] queries, int[] counter){
+        for(int idx = 0; idx < Q; idx++){
+            for(int idx2 = 0; idx2 < N; idx2++){
+                if(queries[idx].equals(strings[idx2])) counter[idx]++;
+            }
+        }
+        return counter;
+    }
 
     public void solution(){
         Scanner scan = new Scanner(System.in);
@@ -18,12 +27,7 @@ public class Arrays05 {
             queries[idx] = scan.next();
             counter[idx] = 0;
         }
-
-        for(int idx = 0; idx < Q; idx++){
-            for(int idx2 = 0; idx2 < N; idx2++){
-                if(queries[idx].equals(strings[idx2])) counter[idx]++;
-            }
-        }
+        counter = sparseArray(Q, N, strings, queries, counter);
         for(int idx = 0; idx < Q; idx++){
             System.out.println(counter[idx]);
         }

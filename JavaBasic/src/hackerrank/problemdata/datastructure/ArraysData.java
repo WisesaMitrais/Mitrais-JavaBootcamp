@@ -5,13 +5,13 @@ import hackerrank.problemdata.ProblemData;
 public class ArraysData implements ProblemData {
     
     private static final int[] PROBLEM_ID = {
-        20201, 20202, 20203, 20204, 20205};
+        20201, 20202, 20203, 20204, 20205, 20206};
     private static final String[] PROBLEM_NAME = {
         "DS_AR_ArrayDS", "DS_AR_2DArrayDS", "DS_AR_DynamicArray", 
-        "DS_AR_LeftRotation", "DS_AR_SparseArrays"};
+        "DS_AR_LeftRotation", "DS_AR_SparseArrays", "DS_AR_ArrayManipulation"};
     private static final String PROBLEM_TYPE = "Arrays";
     private static final String PROBLEM_CATEGORY = "Data Structure";
-    private static final int TOTAL_PROBLEM = 5;
+    private static final int TOTAL_PROBLEM = 6;
 
     @Override
     public int getOneProblemId(int index) {

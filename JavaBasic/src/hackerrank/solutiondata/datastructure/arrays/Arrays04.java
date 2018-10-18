@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Arrays04 {
 
-    public int[] leftRotation(int[] a, int d) {
+    private int[] leftRotation(int[] a, int d) {
         int temp;
         int len = a.length;
         for(int idx = 1; idx <= d; idx++){
@@ -30,7 +30,6 @@ public class Arrays04 {
             System.out.print(result[i] + (i != result.length - 1 ? " " : ""));
         }
         System.out.println("");
-
         in.close();
     }
 }

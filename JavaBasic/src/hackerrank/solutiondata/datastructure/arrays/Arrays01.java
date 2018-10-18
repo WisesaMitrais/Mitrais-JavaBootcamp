@@ -3,6 +3,18 @@ package hackerrank.solutiondata.datastructure.arrays;
 import java.util.Scanner;
 
 public class Arrays01 {
+    
+    private int[] arrayDS(int n, int[] arr){
+        int temp = 0;
+        int j = n-1;
+        for(int i = 0; i < (n/2); i++){
+            temp = arr[j];
+            arr[j] = arr[i];
+            arr[i] = temp;
+            j--;
+        }
+        return arr;
+    }
 
     public void solution() {
         Scanner in = new Scanner(System.in);
@@ -11,28 +23,9 @@ public class Arrays01 {
         for(int arr_i=0; arr_i < n; arr_i++){
             arr[arr_i] = in.nextInt();
         }
-
-        int temp = 0;
-        if(n % 2 == 0){
-            int j = n-1;
-            for(int i = 0; i < (n/2); i++){
-                temp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = temp;
-                j--;
-            }
-        }else{
-            int j = n-1;
-            for(int i = 0; i < (n/2); i++){
-                temp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = temp;
-                j--;
-            }
-        }
-
+        arr = arrayDS(n, arr);
         for(int i = 0; i < n; i++){
-            if(i == n-1) System.out.print(arr[i]);
+            if(i == n-1) System.out.println(arr[i]);
             else System.out.print(arr[i]+" ");
         }
     }
