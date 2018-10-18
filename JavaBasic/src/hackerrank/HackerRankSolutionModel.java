@@ -2,9 +2,11 @@ package hackerrank;
 
 public class HackerRankSolutionModel extends HackerRankProblemModel {
     
-    private int solutionID = 99;
+    private int solutionID;
+    private boolean isSolved;
     
-    public HackerRankSolutionModel(int problemID, String problemName, String problemType, String problemCategory) {
+    public HackerRankSolutionModel(int problemID, String problemName, String problemType, 
+            String problemCategory) {
         super(problemID, problemName, problemType, problemCategory);
     }
 
@@ -16,7 +18,17 @@ public class HackerRankSolutionModel extends HackerRankProblemModel {
         this.solutionID = solutionID;
     }
     
-    public String getProblemName(){
-        return super.getProblemName();
+    public boolean getIsSolved() {
+        return this.isSolved;
+    }
+
+    public void setIsSolved(boolean isSolved) {
+        this.isSolved = isSolved;
+    }
+    
+    //Make sure the relation between problem and solution.
+    @Override
+    public int getProblemID(){
+        return super.getProblemID();
     }
 }

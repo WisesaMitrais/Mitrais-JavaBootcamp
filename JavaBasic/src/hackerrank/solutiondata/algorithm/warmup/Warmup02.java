@@ -1,6 +1,6 @@
 package hackerrank.solutiondata.algorithm.warmup;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Warmup02 {
     

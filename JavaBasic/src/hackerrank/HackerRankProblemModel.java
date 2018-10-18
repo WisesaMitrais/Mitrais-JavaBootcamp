@@ -6,15 +6,13 @@ public class HackerRankProblemModel {
     private final String problemName;
     private final String problemType;
     private final String problemCategory;
-    boolean isSolved;
-
+    
     public HackerRankProblemModel(int problemID, String problemName, String problemType, 
             String problemCategory) {
         this.problemID = problemID;
         this.problemName = problemName;
         this.problemType = problemType;
         this.problemCategory = problemCategory;
-        this.isSolved = false;
     }
 
     public int getProblemID() {
@@ -31,13 +29,5 @@ public class HackerRankProblemModel {
     
     public String getProblemCategory() {
         return this.problemCategory;
-    }
-    
-    public boolean getIsSolved(){
-        return this.isSolved;
-    }
-
-    public void setIsSolved(boolean isSolved) {
-        this.isSolved = isSolved;
     }
 }
