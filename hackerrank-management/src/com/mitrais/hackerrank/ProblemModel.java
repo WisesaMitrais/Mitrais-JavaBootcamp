@@ -1,22 +1,20 @@
 package com.mitrais.hackerrank;
 
-public class HackerRankProblemModel {
+public class ProblemModel {
 
     private final int problemID;
     private final String problemName;
     private final String problemType;
     private final String problemCategory;
     private int solutionID;
-    private boolean isSolved;
 
-    public HackerRankProblemModel(int problemID, String problemName, String problemType,
-                                  String problemCategory) {
+    public ProblemModel(int problemID, String problemName, String problemType,
+                        String problemCategory) {
         this.problemID = problemID;
         this.problemName = problemName;
         this.problemType = problemType;
         this.problemCategory = problemCategory;
         this.solutionID = 99;
-        this.isSolved = false;
     }
 
     public int getProblemID() {
@@ -41,13 +39,5 @@ public class HackerRankProblemModel {
 
     public void setSolutionID(int solutionID) {
         this.solutionID = solutionID;
-    }
-
-    public boolean isSolved() {
-        return isSolved;
-    }
-
-    public void setSolved(boolean solved) {
-        isSolved = solved;
     }
 }

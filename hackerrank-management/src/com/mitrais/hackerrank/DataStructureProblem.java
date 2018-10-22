@@ -1,35 +1,30 @@
 package com.mitrais.hackerrank;
 
-import com.mitrais.hackerrank.data.datastructure.*;
+import com.mitrais.hackerrank.data.*;
 import java.util.*;
 
 public class DataStructureProblem extends GeneralMethodProblem {
 
-    private HackerRankProblemModel problem;
-    private final List<HackerRankProblemModel> arProblem = new ArrayList();
-    private final String[] problemType = {"Arrays"};
-    private final ArraysData arData = new ArraysData();
+    private ProblemData problemData = ProblemData.getInstance();
+    private ProblemModel problemModel;
+    private final List<ProblemModel> arProblemList = new ArrayList();
 
     public DataStructureProblem(){
-        for(int i = 0; i < arData.getTotalProblem(); i++){
-            problem = new HackerRankProblemModel(arData.getOneProblemId(i),
-                    arData.getOneProblemName(i), arData.getProblemType(), arData.getProblemCategory());
-            arProblem.add(problem);
-        }
+        injectData(problemData.getInstanceObject("AR"), arProblemList);
     }
 
     @Override
     public void printAllProblem() {
-        printProblem("AR", arProblem);
+        printProblem(arProblemList);
     }
 
     @Override
     public void printAllProblem(String problemInitial) {
         switch(problemInitial){
             case "AR":
-                printProblem(problemType[0], arProblem);
+                printProblem(arProblemList);
                 break;
-            default: System.out.println("Problem Type Not Found!");
+            default: System.out.println("Problem type not found !!");
         }
     }
 
@@ -37,34 +32,35 @@ public class DataStructureProblem extends GeneralMethodProblem {
     public void printTotalProblem(String problemInitial) {
         switch(problemInitial){
             case "AR":
-                System.out.println(arData.getTotalProblem());
+                System.out.println(arProblemList.size());
                 break;
-            default: System.out.println("Problem Type Not Found!");
+            default: System.out.println("Problem type not found !!");
         }
     }
 
-    @Override
-    public void addProblem(String problemInitial, String name) {
-        switch(problemInitial){
-            case "AR":
-                arData.addProblem(name);
-                break;
-            default: System.out.println("Problem Type Not Found!");
-        }
-    }
-
-    private void printProblem(String problemType, List<HackerRankProblemModel> problemList){
+    private void printProblem(List<ProblemModel> problemList){
         try{
-            System.out.println("Problem List of Algorithm " + problemType + ":");
+            problemModel = problemList.get(0);
+            System.out.println("Problem List of " + problemModel.getProblemCategory() + " " + problemModel.getProblemType() + ":");
             for(int idx = 0; idx < problemList.size(); idx++){
-                problem = problemList.get(idx);
-                System.out.println(problemList.get(idx).getProblemID()+" - "
-                        +problemList.get(idx).getProblemName());
+                problemModel = problemList.get(idx);
+                System.out.println(problemList.get(idx).getProblemID() + " - " + problemList.get(idx).getProblemName());
             }
-        }catch(ArrayIndexOutOfBoundsException ex){
-            System.out.println("ERROR, Array index out of bound!");
-        }catch(NullPointerException ex){
-            System.out.println("ERROR, Array index(s) is null");
+            System.out.println();
+        }catch(IndexOutOfBoundsException ex){
+            System.out.println("ERROR, Array index out of bound !!");
+            System.out.println("Detail: " + ex);
+        }catch(ClassCastException ex){
+            System.out.println("ERROR, Array index(s) is null !!");
+            System.out.println("Detail: " + ex);
+        }
+    }
+
+    private void injectData(Data data, List<ProblemModel> problemList){
+        for(int i = 0; i < data.getTotalProblem(); i++){
+            problemModel = new ProblemModel(data.getOneProblemId(i), data.getOneProblemName(i), data.getProblemType(),
+                    data.getProblemCategory());
+            problemList.add(problemModel);
         }
     }
 }

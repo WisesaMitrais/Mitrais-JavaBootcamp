@@ -12,16 +12,10 @@ public class Main {
 
     //Logic begin here.
     public static void runningExperiment(){
-        AlgorithmProblem algoProblem = AlgorithmProblem.getSingletonAP();
-
-        algoProblem.printAllProblem("WU");
-        algoProblem.printTotalProblem("WU");
-        algoProblem.addProblem("WU", "XXX");
-
-        System.out.println("\n");
-
-        algoProblem.printAllProblem("WU");
-        algoProblem.printTotalProblem("WU");
+        AlgorithmProblem algorithmProblem = new AlgorithmProblem();
+        algorithmProblem.printAllProblem();
+        DataStructureProblem dataStructureProblem = new DataStructureProblem();
+        dataStructureProblem.printAllProblem();
     }
 
     public static void main(String[] args) {
