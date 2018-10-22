@@ -13,6 +13,11 @@ public class ArraysData implements Data {
     private static final String PROBLEM_TYPE = "Arrays";
     private static final String PROBLEM_CATEGORY = "Data Structure";
     private static int totalProblem = 6;
+    private List<ArraysData> newArrayData;
+
+    public ArraysData(){
+        newArrayData = new ArrayList<ArraysData>();
+    }
 
     @Override
     public int getTotalProblem() {
@@ -42,9 +47,22 @@ public class ArraysData implements Data {
     }
 
     @Override
-    public void addProblem(String name) {
+    public int addProblem(String name) {
         problemId.add(problemId.get(totalProblem - 1) + 1);
         problemName.add(name);
         totalProblem++;
+        return totalProblem;
+    }
+
+    public void addArrayList(ArraysData arData) {
+        newArrayData.add(arData);
+    }
+
+    public void remove(ArraysData arData) {
+        newArrayData.remove(arData);
+    }
+
+    public List<ArraysData> getNewArrayData(){
+        return newArrayData;
     }
 }
