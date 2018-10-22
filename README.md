@@ -37,7 +37,7 @@ Keypoints :
 1. Understand usage of List, Set, Map, Stack and their implementations
 2. Able to manipulate collection (addtition, filtering, removing, sorting)
 ## Module Java Fundamental 2
-### Task Java Class Design | 17/10/2018 - Now
+### Task Java Class Design | 17/10/2018 - 22/10/2018
 Keypoints :
 1. Understand usage of abstract class
 2. Understand usage of inner class, nested class, local class, anonymous class
