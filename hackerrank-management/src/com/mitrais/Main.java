@@ -1,8 +1,6 @@
 package com.mitrais;
 
 import com.mitrais.hackerrank.*;
-import com.mitrais.hackerrank.data.algorithm.*;
-import com.mitrais.hackerrank.data.datastructure.*;
 import com.mitrais.hackerrank.solution.algorithm.warmup.*;
 import com.mitrais.hackerrank.solution.algorithm.implementation.*;
 import com.mitrais.hackerrank.solution.datastructure.arrays.*;
@@ -14,8 +12,16 @@ public class Main {
 
     //Logic begin here.
     public static void runningExperiment(){
-        WarmupData wuData = new WarmupData();
-        wuData.addProblem("XXX");
+        AlgorithmProblem algoProblem = AlgorithmProblem.getSingletonAP();
+
+        algoProblem.printAllProblem("WU");
+        algoProblem.printTotalProblem("WU");
+        algoProblem.addProblem("WU", "XXX");
+
+        System.out.println("\n");
+
+        algoProblem.printAllProblem("WU");
+        algoProblem.printTotalProblem("WU");
     }
 
     public static void main(String[] args) {

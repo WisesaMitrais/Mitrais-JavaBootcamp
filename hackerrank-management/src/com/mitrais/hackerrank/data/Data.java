@@ -7,5 +7,5 @@ public interface Data {
     String getOneProblemName(int idx);
     String getProblemType();
     String getProblemCategory();
-    void addProblem(String name);
+    int addProblem(String name);
 }

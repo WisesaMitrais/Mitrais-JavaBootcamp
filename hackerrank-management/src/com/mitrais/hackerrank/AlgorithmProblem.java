@@ -5,14 +5,18 @@ import java.util.*;
 
 public class AlgorithmProblem extends GeneralMethodProblem {
 
+    //Singleton class, singleton design pattern.
+    private static AlgorithmProblem singletonAP = new AlgorithmProblem();
+
     private HackerRankProblemModel problem;
     private final List<HackerRankProblemModel> wuProblem = new ArrayList();
     private final List<HackerRankProblemModel> imProblem = new ArrayList();
     private final String[] problemType = {"Warmup", "Implementation"};
     private final WarmupData wuData = new WarmupData();
     private final ImplementationData imData = new ImplementationData();
+    private int lastIdx = 0;
 
-    public AlgorithmProblem(){
+    private AlgorithmProblem(){
         for(int i = 0; i < wuData.getTotalProblem(); i++){
             problem = new HackerRankProblemModel(wuData.getOneProblemId(i),
                     wuData.getOneProblemName(i), wuData.getProblemType(),
@@ -59,6 +63,23 @@ public class AlgorithmProblem extends GeneralMethodProblem {
         }
     }
 
+    @Override
+    public void addProblem(String problemInitial, String name) {
+        switch(problemInitial){
+            case "WU":
+                lastIdx = wuData.addProblem(name);
+                problem = new HackerRankProblemModel(wuData.getOneProblemId(lastIdx - 1),
+                        wuData.getOneProblemName(lastIdx - 1), wuData.getProblemType(),
+                        wuData.getProblemCategory());
+                wuProblem.add(problem);
+                break;
+            case "IM":
+                imData.addProblem(name);
+                break;
+            default: System.out.println("Problem Type Not Found!");
+        }
+    }
+
     private void printProblem(String problemType, List<HackerRankProblemModel> problemList){
         try{
             System.out.println("Problem List of Algorithm " + problemType + ":");
@@ -74,5 +95,9 @@ public class AlgorithmProblem extends GeneralMethodProblem {
             System.out.println("ERROR, Array index(s) is null");
             System.out.println("Detail: " + ex);
         }
+    }
+
+    public static AlgorithmProblem getSingletonAP(){
+        return singletonAP;
     }
 }

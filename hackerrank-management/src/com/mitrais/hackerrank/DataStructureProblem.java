@@ -43,6 +43,16 @@ public class DataStructureProblem extends GeneralMethodProblem {
         }
     }
 
+    @Override
+    public void addProblem(String problemInitial, String name) {
+        switch(problemInitial){
+            case "AR":
+                arData.addProblem(name);
+                break;
+            default: System.out.println("Problem Type Not Found!");
+        }
+    }
+
     private void printProblem(String problemType, List<HackerRankProblemModel> problemList){
         try{
             System.out.println("Problem List of Algorithm " + problemType + ":");
