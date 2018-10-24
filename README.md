@@ -44,9 +44,15 @@ Keypoints :
 3. Understand enumerated types, include method and constructor in enumerated types
 4. Understand generic types, and its usage in collection
 5. Undestand several design pattern implementation: Singleton, Factory, Strategy
-### Task Lambda Expression | 22/10/2018 - Now
+### Task Lambda Expression | 22/10/2018 - 24/10/2014
 Keypoints :
 1. Understand lambda form, type inference, 
 2. Understand lambda scoping rules, effectively final local variable
 3. Understand lambda building block in java.util.function package
 4. Understand static & default method in Java 8
+### Task Stream API | 24/10/2018 - Now
+Keypoints :
+1. Able to use peek(), map(), flatMap() method in extracting data
+2. Able to use findFirst(), findAny(), anyMatch(), allMatch(), noneMatch() method to search data
+3. Able to use Optional data type
+4. Able to sort data using stream 
