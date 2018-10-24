@@ -7,7 +7,7 @@ public class ImplementationData implements Data {
 
     private static ImplementationData imSingleton = null; //The singleton class.
     private final List<Integer> PROBLEM_ID = Arrays.asList(
-            10201, 10202, 10203);
+            10701, 10702, 10703);
     private final List<String> PROBLEM_NAME = Arrays.asList(
             "AL_IM_GradingStudents", "AL_IM_AppleAndOrange", "AL_IM_Kangaroo");
     private final String PROBLEM_TYPE = "Implementation";

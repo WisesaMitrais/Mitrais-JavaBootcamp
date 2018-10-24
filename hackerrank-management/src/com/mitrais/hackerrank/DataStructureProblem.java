@@ -7,34 +7,53 @@ public class DataStructureProblem extends GeneralMethodProblem {
 
     private ProblemData problemData = ProblemData.getInstance();
     private ProblemModel problemModel;
-    private final List<ProblemModel> arProblemList = new ArrayList();
+    private final List<List<ProblemModel>> listOfProblemLists = new ArrayList<>();
+    private final List<String> initial = Arrays.asList(
+            "AV", "AR", "BT", "DS", "HP", "LL", "QU", "SC", "TE", "TR");
+    private int index = 0;
 
     public DataStructureProblem(){
-        injectData(problemData.getInstanceObject("AR"), arProblemList);
+        for(int i = 0; i < initial.size(); i++){
+            listOfProblemLists.add(new ArrayList<>());
+            injectData(problemData.getInstanceObject(initial.get(i)), listOfProblemLists.get(i));
+        }
     }
 
     @Override
     public void printAllProblem() {
-        printProblem(arProblemList);
+        for(int i = 0; i < initial.size(); i++){
+            printProblem(listOfProblemLists.get(i));
+        }
     }
 
     @Override
     public void printAllProblem(String problemInitial) {
-        switch(problemInitial){
-            case "AR":
-                printProblem(arProblemList);
-                break;
-            default: System.out.println("Problem type not found !!");
+        try{
+            index = initial.indexOf(problemInitial);
+            printProblem(listOfProblemLists.get(index));
+        }catch(Exception ex){
+            System.out.println("Problem initial not found !!");
         }
     }
 
     @Override
     public void printTotalProblem(String problemInitial) {
-        switch(problemInitial){
-            case "AR":
-                System.out.println(arProblemList.size());
-                break;
-            default: System.out.println("Problem type not found !!");
+        try{
+            index = initial.indexOf(problemInitial);
+            System.out.println(listOfProblemLists.get(index).size());
+        }catch(Exception ex){
+            System.out.println("Problem initial not found !!");
+        }
+    }
+
+    @Override
+    public List<ProblemModel> getAllProblem(String problemInitial) {
+        try{
+            index = initial.indexOf(problemInitial);
+            return listOfProblemLists.get(index);
+        }catch(Exception ex){
+            System.out.println("Problem initial not found !!");
+            return null;
         }
     }
 

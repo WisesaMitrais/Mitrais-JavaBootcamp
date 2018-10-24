@@ -7,43 +7,53 @@ public class AlgorithmProblem extends GeneralMethodProblem {
 
     private ProblemData problemData = ProblemData.getInstance();
     private ProblemModel problemModel;
-    private final List<ProblemModel> wuProblemList = new ArrayList();
-    private final List<ProblemModel> imProblemList = new ArrayList();
+    private final List<List<ProblemModel>> listOfProblemLists = new ArrayList<>();
+    private final List<String> initial = Arrays.asList(
+            "BM", "CA", "DP", "GT", "GH", "GR", "IM", "NP", "RC", "SE", "ST", "SG", "WU");
+    private int index = 0;
 
     public AlgorithmProblem(){
-        injectData(problemData.getInstanceObject("WU"), wuProblemList);
-        injectData(problemData.getInstanceObject("IM"), imProblemList);
+        for(int i = 0; i < initial.size(); i++){
+            listOfProblemLists.add(new ArrayList<>());
+            injectData(problemData.getInstanceObject(initial.get(i)), listOfProblemLists.get(i));
+        }
     }
 
     @Override
     public void printAllProblem() {
-        printProblem(wuProblemList);
-        printProblem(imProblemList);
+        for(int i = 0; i < initial.size(); i++){
+            printProblem(listOfProblemLists.get(i));
+        }
     }
 
     @Override
     public void printAllProblem(String problemInitial) {
-        switch(problemInitial){
-            case "WU":
-                printProblem(wuProblemList);
-                break;
-            case "IM":
-                printProblem(imProblemList);
-                break;
-            default: System.out.println("Problem type not found !!");
+        try{
+            index = initial.indexOf(problemInitial);
+            printProblem(listOfProblemLists.get(index));
+        }catch(Exception ex){
+            System.out.println("Problem initial not found !!");
         }
     }
 
     @Override
     public void printTotalProblem(String problemInitial) {
-        switch(problemInitial){
-            case "WU":
-                System.out.println(wuProblemList.size());
-                break;
-            case "IM":
-                System.out.println(imProblemList.size());
-                break;
-            default: System.out.println("Problem type not found !!");
+        try{
+            index = initial.indexOf(problemInitial);
+            System.out.println(listOfProblemLists.get(index).size());
+        }catch(Exception ex){
+            System.out.println("Problem initial not found !!");
+        }
+    }
+
+    @Override
+    public List<ProblemModel> getAllProblem(String problemInitial) {
+        try{
+            index = initial.indexOf(problemInitial);
+            return listOfProblemLists.get(index);
+        }catch(Exception ex){
+            System.out.println("Problem initial not found !!");
+            return null;
         }
     }
 
