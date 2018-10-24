@@ -37,14 +37,14 @@ Keypoints :
 1. Understand usage of List, Set, Map, Stack and their implementations
 2. Able to manipulate collection (addtition, filtering, removing, sorting)
 ## Module Java Fundamental 2
-### Task Java Class Design | 17/10/2018 - 22/10/2018
+### Task Java Class Design | 17/10/2018 - 22/10/2018 (2 days)
 Keypoints :
 1. Understand usage of abstract class
 2. Understand usage of inner class, nested class, local class, anonymous class
 3. Understand enumerated types, include method and constructor in enumerated types
 4. Understand generic types, and its usage in collection
 5. Undestand several design pattern implementation: Singleton, Factory, Strategy
-### Task Lambda Expression | 22/10/2018 - 24/10/2014
+### Task Lambda Expression | 22/10/2018 - 24/10/2014 (2 days)
 Keypoints :
 1. Understand lambda form, type inference, 
 2. Understand lambda scoping rules, effectively final local variable
