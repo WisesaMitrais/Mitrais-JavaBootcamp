@@ -12,6 +12,7 @@ public class TrieData implements Data {
             "DS_TR_Contacts", "DS_TR_NoPrefixSet");
     private final String PROBLEM_TYPE = "Trie";
     private final String PROBLEM_CATEGORY = "Data Structure";
+    private final String TYPE_INITIAL = "TR";
     private final int TOTAL_PROBLEM = 2;
 
     //Private constructor for singleton class.
@@ -39,6 +40,11 @@ public class TrieData implements Data {
     @Override
     public String getProblemType() {
         return PROBLEM_TYPE;
+    }
+
+    @Override
+    public String getTypeInitial() {
+        return TYPE_INITIAL;
     }
 
     @Override

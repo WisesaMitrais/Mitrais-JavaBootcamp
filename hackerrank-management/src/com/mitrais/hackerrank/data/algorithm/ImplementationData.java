@@ -11,6 +11,7 @@ public class ImplementationData implements Data {
     private final List<String> PROBLEM_NAME = Arrays.asList(
             "AL_IM_GradingStudents", "AL_IM_AppleAndOrange", "AL_IM_Kangaroo");
     private final String PROBLEM_TYPE = "Implementation";
+    private final String TYPE_INITIAL = "IM";
     private final String PROBLEM_CATEGORY = "Algorithm";
     private final int TOTAL_PROBLEM = 3;
 
@@ -39,6 +40,11 @@ public class ImplementationData implements Data {
     @Override
     public String getProblemType() {
         return PROBLEM_TYPE;
+    }
+
+    @Override
+    public String getTypeInitial() {
+        return TYPE_INITIAL;
     }
 
     @Override

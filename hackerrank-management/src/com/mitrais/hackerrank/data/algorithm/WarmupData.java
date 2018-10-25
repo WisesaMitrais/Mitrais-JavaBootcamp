@@ -14,6 +14,7 @@ public class WarmupData implements Data {
             "AL_WU_Staircase", "AL_WU_MiniMaxSum", "AL_WU_TimeConversion",
             "AL_WU_BirthdayCakeCandles");
     private final String PROBLEM_TYPE = "Warmup";
+    private final String TYPE_INITIAL = "WU";
     private final String PROBLEM_CATEGORY = "Algorithm";
     private final int TOTAL_PROBLEM = 10;
 
@@ -42,6 +43,11 @@ public class WarmupData implements Data {
     @Override
     public String getProblemType() {
         return PROBLEM_TYPE;
+    }
+
+    @Override
+    public String getTypeInitial() {
+        return TYPE_INITIAL;
     }
 
     @Override

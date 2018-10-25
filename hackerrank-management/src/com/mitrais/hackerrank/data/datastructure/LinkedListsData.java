@@ -16,6 +16,7 @@ public class LinkedListsData implements Data {
             "DS_LL_GetNodeValue", "DS_LL_DeleteDuplicateValueNodesFromASortedLinkedList", "DS_LL_CycleDetection",
             "DS_LL_FindMergePointOfTwoLists", "DS_LL_InsertingANodeIntoASortedDoublyLinkedList", "DS_LL_ReverseADoublyLinkedList");
     private final String PROBLEM_TYPE = "Linked Lists";
+    private final String TYPE_INITIAL = "LL";
     private final String PROBLEM_CATEGORY = "Data Structure";
     private final int TOTAL_PROBLEM = 15;
 
@@ -44,6 +45,11 @@ public class LinkedListsData implements Data {
     @Override
     public String getProblemType() {
         return PROBLEM_TYPE;
+    }
+
+    @Override
+    public String getTypeInitial() {
+        return TYPE_INITIAL;
     }
 
     @Override

@@ -12,6 +12,7 @@ public class DisjointSetData implements Data {
             "DS_DS_MergingCommunities", "DS_DS_ComponentsInAGraph", "DS_DS_KunduAndTree",
             "DS_DS_SuperMaximumCostQueries");
     private final String PROBLEM_TYPE = "Disjoint Set";
+    private final String TYPE_INITIAL = "DS";
     private final String PROBLEM_CATEGORY = "Data Structure";
     private final int TOTAL_PROBLEM = 4;
 
@@ -40,6 +41,11 @@ public class DisjointSetData implements Data {
     @Override
     public String getProblemType() {
         return PROBLEM_TYPE;
+    }
+
+    @Override
+    public String getTypeInitial() {
+        return TYPE_INITIAL;
     }
 
     @Override

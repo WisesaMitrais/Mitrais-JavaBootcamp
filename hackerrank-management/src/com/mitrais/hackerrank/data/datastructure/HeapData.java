@@ -12,6 +12,7 @@ public class HeapData implements Data {
             "DS_HP_QHEAP1", "DS_HP_JesseAndCookies", "DS_HP_FindTheRunningMedian",
             "DS_HP_MinimumAverageWaitingTime");
     private final String PROBLEM_TYPE = "Heap";
+    private final String TYPE_INITIAL = "HP";
     private final String PROBLEM_CATEGORY = "Data Structure";
     private final int TOTAL_PROBLEM = 4;
 
@@ -40,6 +41,11 @@ public class HeapData implements Data {
     @Override
     public String getProblemType() {
         return PROBLEM_TYPE;
+    }
+
+    @Override
+    public String getTypeInitial() {
+        return TYPE_INITIAL;
     }
 
     @Override

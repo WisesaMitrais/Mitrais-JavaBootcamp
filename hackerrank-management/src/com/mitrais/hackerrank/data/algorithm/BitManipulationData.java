@@ -10,7 +10,8 @@ public class BitManipulationData implements Data {
             11301);
     private final List<String> PROBLEM_NAME = Arrays.asList(
             "");
-    private final String PROBLEM_TYPE = "";
+    private final String PROBLEM_TYPE = "Bit Manipulation";
+    private final String TYPE_INITIAL = "BM";
     private final String PROBLEM_CATEGORY = "Algorithm";
     private final int TOTAL_PROBLEM = 0;
 
@@ -39,6 +40,11 @@ public class BitManipulationData implements Data {
     @Override
     public String getProblemType() {
         return PROBLEM_TYPE;
+    }
+
+    @Override
+    public String getTypeInitial() {
+        return TYPE_INITIAL;
     }
 
     @Override

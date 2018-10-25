@@ -33,6 +33,7 @@ public class AdvancedData implements Data {
             "DS_AV_FindThePermutation", "DS_AV_CompanyRetreat", "DS_AV_BoxOperations",
             "DS_AV_MaxTransform", "DS_AV_ArrayAndQueries");
     private final String PROBLEM_TYPE = "Advanced";
+    private final String TYPE_INITIAL = "AV";
     private final String PROBLEM_CATEGORY = "Data Structure";
     private final int TOTAL_PROBLEM = 53;
 
@@ -61,6 +62,11 @@ public class AdvancedData implements Data {
     @Override
     public String getProblemType() {
         return PROBLEM_TYPE;
+    }
+
+    @Override
+    public String getTypeInitial() {
+        return TYPE_INITIAL;
     }
 
     @Override

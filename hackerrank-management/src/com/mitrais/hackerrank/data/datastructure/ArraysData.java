@@ -12,6 +12,7 @@ public class ArraysData implements Data {
             "DS_AR_ArrayDS", "DS_AR_2DArrayDS", "DS_AR_DynamicArray",
             "DS_AR_LeftRotation", "DS_AR_SparseArrays", "DS_AR_ArrayManipulation");
     private final String PROBLEM_TYPE = "Arrays";
+    private final String TYPE_INITIAL = "AR";
     private final String PROBLEM_CATEGORY = "Data Structure";
     private final int TOTAL_PROBLEM = 6;
 
@@ -40,6 +41,11 @@ public class ArraysData implements Data {
     @Override
     public String getProblemType() {
         return PROBLEM_TYPE;
+    }
+
+    @Override
+    public String getTypeInitial() {
+        return TYPE_INITIAL;
     }
 
     @Override

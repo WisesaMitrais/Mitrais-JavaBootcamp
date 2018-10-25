@@ -17,6 +17,7 @@ public class TreesData implements Data {
             "DS_TE_SquareTenTree", "DS_TE_BalancedForest", "DS_TE_JennysSubtrees",
             "DS_TE_TreeCoordinates", "DS_TE_ArrayPairs");
     private final String PROBLEM_TYPE = "Trees";
+    private final String TYPE_INITIAL = "TE";
     private final String PROBLEM_CATEGORY = "Data Structure";
     private final int TOTAL_PROBLEM = 17;
 
@@ -45,6 +46,11 @@ public class TreesData implements Data {
     @Override
     public String getProblemType() {
         return PROBLEM_TYPE;
+    }
+
+    @Override
+    public String getTypeInitial() {
+        return TYPE_INITIAL;
     }
 
     @Override

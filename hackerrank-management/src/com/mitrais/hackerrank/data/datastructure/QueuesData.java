@@ -12,6 +12,7 @@ public class QueuesData implements Data {
             "DS_QU_QueueUsingTwoStacks", "DS_QU_CastleOnTheGrid", "DS_QU_DownToZeroII",
             "DS_QU_TruckTour", "DS_QU_QueriesWithFixedLength");
     private final String PROBLEM_TYPE = "Queues";
+    private final String TYPE_INITIAL = "QU";
     private final String PROBLEM_CATEGORY = "Data Structure";
     private final int TOTAL_PROBLEM = 5;
 
@@ -40,6 +41,11 @@ public class QueuesData implements Data {
     @Override
     public String getProblemType() {
         return PROBLEM_TYPE;
+    }
+
+    @Override
+    public String getTypeInitial() {
+        return TYPE_INITIAL;
     }
 
     @Override

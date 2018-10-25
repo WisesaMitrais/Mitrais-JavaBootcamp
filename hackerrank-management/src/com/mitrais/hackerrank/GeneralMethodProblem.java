@@ -4,8 +4,8 @@ import java.util.*;
 
 public abstract class GeneralMethodProblem {
 
-    abstract void printAllProblem(); //Print all problem.
-    abstract void printAllProblem(String problemInitial); //Print all problem based on one problem type.
-    abstract void printTotalProblem(String problemInitial);
+    abstract int getTotalProblem(); //Get total problem in all problem type.
+    abstract int getTotalProblem(String problemInitial); //Get total problem based on one problem type.
+    abstract List<List<ProblemModel>> getAllProblem(); //Get all problem in all problem type.
     abstract List<ProblemModel> getAllProblem(String problemInitial); //Get all problem based on one problem type.
 }

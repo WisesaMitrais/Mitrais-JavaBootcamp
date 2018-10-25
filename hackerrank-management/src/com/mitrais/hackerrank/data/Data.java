@@ -6,5 +6,6 @@ public interface Data {
     int getOneProblemId(int idx);
     String getOneProblemName(int idx);
     String getProblemType();
+    String getTypeInitial();
     String getProblemCategory();
 }

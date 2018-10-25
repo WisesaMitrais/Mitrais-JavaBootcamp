@@ -2,7 +2,6 @@ package com.mitrais.hackerrank.data;
 
 import com.mitrais.hackerrank.data.algorithm.*;
 import com.mitrais.hackerrank.data.datastructure.*;
-import com.mitrais.hackerrank.procedure.Strategy;
 
 public class ProblemData {
 

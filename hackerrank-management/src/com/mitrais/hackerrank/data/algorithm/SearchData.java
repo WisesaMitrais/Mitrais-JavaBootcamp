@@ -10,7 +10,8 @@ public class SearchData implements Data {
             11301);
     private final List<String> PROBLEM_NAME = Arrays.asList(
             "");
-    private final String PROBLEM_TYPE = "";
+    private final String PROBLEM_TYPE = "Search";
+    private final String TYPE_INITIAL = "SE";
     private final String PROBLEM_CATEGORY = "Algorithm";
     private final int TOTAL_PROBLEM = 0;
 
@@ -39,6 +40,11 @@ public class SearchData implements Data {
     @Override
     public String getProblemType() {
         return PROBLEM_TYPE;
+    }
+
+    @Override
+    public String getTypeInitial() {
+        return TYPE_INITIAL;
     }
 
     @Override

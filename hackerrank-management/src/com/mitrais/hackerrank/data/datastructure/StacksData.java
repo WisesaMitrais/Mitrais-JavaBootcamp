@@ -13,6 +13,7 @@ public class StacksData implements Data {
             "DS_SC_GameOfTwoStacks", "DS_SC_LargestRectangle", "DS_SC_SimpleTextEditor",
             "DS_SC_PoisonousPlants", "DS_SC_ANDXOROR", "DS_SC_Waiter");
     private final String PROBLEM_TYPE = "Stacks";
+    private final String TYPE_INITIAL = "SC";
     private final String PROBLEM_CATEGORY = "Data Structure";
     private final int TOTAL_PROBLEM = 9;
 
@@ -41,6 +42,11 @@ public class StacksData implements Data {
     @Override
     public String getProblemType() {
         return PROBLEM_TYPE;
+    }
+
+    @Override
+    public String getTypeInitial() {
+        return TYPE_INITIAL;
     }
 
     @Override
