@@ -50,7 +50,7 @@ Keypoints :
 2. Understand lambda scoping rules, effectively final local variable
 3. Understand lambda building block in java.util.function package
 4. Understand static & default method in Java 8
-### Task Stream API | 24/10/2018 - Now
+### Task Stream API | 24/10/2018 - 25/10/2018 (2 days)
 Keypoints :
 1. Able to use peek(), map(), flatMap() method in extracting data
 2. Able to use findFirst(), findAny(), anyMatch(), allMatch(), noneMatch() method to search data
