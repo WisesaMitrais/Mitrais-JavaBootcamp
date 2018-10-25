@@ -7,13 +7,17 @@ public class ConstructiveAlgorithmsData implements Data {
 
     private static ConstructiveAlgorithmsData caSingleton = null; //The singleton class.
     private final List<Integer> PROBLEM_ID = Arrays.asList(
-            11301);
+            10201, 10202, 10203, 10204, 10205, 10206, 10207, 10208, 10209, 10210,
+            10211);
     private final List<String> PROBLEM_NAME = Arrays.asList(
-            "");
+            "AL_CA_ArrayConstruction", "AL_CA_Beautiful3Set", "AL_CA_Bonetrousle",
+            "AL_CA_FlippingTheMatrix", "AL_CA_GamingArray", "AL_CA_InverseRMQ",
+            "AL_CA_LenaSort", "AL_CA_LovelyTriplets", "AL_CA_NewYearChaos",
+            "AL_CA_TwoSubarrays", "AL_CA_YetAnotherKMPProblem");
     private final String PROBLEM_TYPE = "Constructive Algorithms";
     private final String TYPE_INITIAL = "CA";
     private final String PROBLEM_CATEGORY = "Algorithm";
-    private final int TOTAL_PROBLEM = 0;
+    private final int TOTAL_PROBLEM = 11;
 
     //Private constructor for singleton class.
     private ConstructiveAlgorithmsData(){

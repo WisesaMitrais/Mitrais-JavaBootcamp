@@ -7,13 +7,23 @@ public class BitManipulationData implements Data {
 
     private static BitManipulationData bmSingleton = null; //The singleton class.
     private final List<Integer> PROBLEM_ID = Arrays.asList(
-            11301);
+            10101, 10102, 10103, 10104, 10105, 10106, 10107, 10108, 10109, 10110,
+            10111, 10112, 10113, 10114, 10115, 10116, 10117, 10118, 10119, 10120,
+            10121, 10122, 10123, 10124, 10125, 10126);
     private final List<String> PROBLEM_NAME = Arrays.asList(
-            "");
+            "AL_BM_2sComplement", "AL_BM_ANDProduct", "AL_BM_AOrB",
+            "AL_BM_ChangingBits", "AL_BM_Cipher", "AL_BM_CounterGame",
+            "AL_BM_FlippingBits", "AL_BM_HammingDistance", "AL_BM_IterateIt",
+            "AL_BM_LonelyInteger", "AL_BM_ManipulativeNumbers", "AL_BM_MaximizingTheFunction",
+            "AL_BM_MaximizingXOR", "AL_BM_MixingProteins", "AL_BM_SansaAndXOR",
+            "AL_BM_StoneGame", "AL_BM_StringTransmission", "AL_BM_SumVSXOR",
+            "AL_BM_TheGreatXOR", "AL_BM_WhatsNext", "AL_BM_XoringNinja",
+            "AL_BM_XORKey", "AL_BM_XORMatrix", "AL_BM_XorSequence",
+            "AL_BM_XORSubsequences", "AL_BM_YetAnotherMinimaxProblem");
     private final String PROBLEM_TYPE = "Bit Manipulation";
     private final String TYPE_INITIAL = "BM";
     private final String PROBLEM_CATEGORY = "Algorithm";
-    private final int TOTAL_PROBLEM = 0;
+    private final int TOTAL_PROBLEM = 26;
 
     //Private constructor for singleton class.
     private BitManipulationData(){

@@ -11,20 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mitrais/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="89" column="26" lean-forward="true" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -74,8 +61,6 @@
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/datastructure/Trie.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/GeneralMethodProblem.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/Data.java" />
-        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/ConstructiveAlgorithmsData.java" />
-        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/DynamicProgrammingData.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/ProblemModel.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/GameTheoryData.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/GraphTheoryData.java" />
@@ -88,7 +73,6 @@
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/StringsData.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/WarmupData.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/datastructure/AdvancedData.java" />
-        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/datastructure/ArraysData.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/datastructure/BalancedTreesData.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/datastructure/DisjointSetData.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/datastructure/HeapData.java" />
@@ -97,17 +81,19 @@
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/datastructure/StacksData.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/datastructure/TreesData.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/datastructure/TrieData.java" />
-        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/BitManipulationData.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/AlgorithmProblem.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/ProblemData.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/DataStructureProblem.java" />
+        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/datastructure/ArraysData.java" />
+        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/BitManipulationData.java" />
+        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/ConstructiveAlgorithmsData.java" />
+        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/DynamicProgrammingData.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
+    <option name="x" value="9" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
@@ -169,7 +155,7 @@
               <item name="mitrais" type="462c0819:PsiDirectoryNode" />
               <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -250,7 +236,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -258,7 +243,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37597504" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" x="684" y="31" width="681" height="706" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33853355" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" x="684" y="31" width="681" height="706" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -441,39 +426,6 @@
         <state relative-caret-position="136">
           <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/ConstructiveAlgorithmsData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-          <folding>
-            <element signature="e#1387#1388#0" expanded="false" />
-            <element signature="e#1422#1423#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/DynamicProgrammingData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-          <folding>
-            <element signature="e#1371#1372#0" expanded="false" />
-            <element signature="e#1406#1407#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/GameTheoryData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
-          <folding>
-            <element signature="e#1339#1340#0" expanded="false" />
-            <element signature="e#1374#1375#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -692,31 +644,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/BitManipulationData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="60" lean-forward="true" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
-          <folding>
-            <element signature="e#1359#1360#0" expanded="false" />
-            <element signature="e#1394#1395#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/data/ProblemData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="10" column="46" lean-forward="false" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/AlgorithmProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -728,7 +659,7 @@
         <state relative-caret-position="-85">
           <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -736,18 +667,66 @@
     <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/data/datastructure/ArraysData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="11" column="67" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="67" />
+          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/BitManipulationData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/ConstructiveAlgorithmsData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/DynamicProgrammingData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104">
+          <caret line="56" column="40" lean-forward="false" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mitrais/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="89" column="26" lean-forward="true" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
+        <state relative-caret-position="2329">
+          <caret line="137" column="5" lean-forward="true" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1357#1358#0" expanded="true" />
+            <element signature="e#1405#1406#0" expanded="true" />
+            <element signature="e#1459#1460#0" expanded="true" />
+            <element signature="e#1514#1515#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/AlgorithmProblem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/GameTheoryData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
