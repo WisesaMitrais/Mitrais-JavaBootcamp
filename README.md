@@ -55,4 +55,9 @@ Keypoints :
 1. Able to use peek(), map(), flatMap() method in extracting data
 2. Able to use findFirst(), findAny(), anyMatch(), allMatch(), noneMatch() method to search data
 3. Able to use Optional data type
-4. Able to sort data using stream 
+4. Able to sort data using stream
+### Task File I/O | 30/10/2018 (1 day)
+Keypoints :
+1. Able to use advanced try-catch block, finally, multicatch, try-with-resources
+2. Able to use Paths, File class utility
+3. Able to implement stream for File I/O processing
