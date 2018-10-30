@@ -7,13 +7,22 @@ public class GreedyData implements Data {
 
     private static GreedyData grSingleton = null; //The singleton class.
     private final List<Integer> PROBLEM_ID = Arrays.asList(
-            11301);
+            10601, 10602, 10603, 10604, 10605, 10606, 10607, 10608, 10609, 10610,
+            10611, 10612, 10613, 10614, 10615, 10616, 10617, 10618, 10619, 10620,
+            10621, 10622);
     private final List<String> PROBLEM_NAME = Arrays.asList(
-            "");
+            "AL_GR_AccessoryCollection", "AL_GR_BeautifulPairs", "AL_GR_ChiefHopper",
+            "AL_GR_CuttingBoards", "AL_GR_FightingPits", "AL_GR_GoodlandElectricity",
+            "AL_GR_GreedyFlorist", "AL_GR_GridChallenge", "AL_GR_JimAndTheOrders",
+            "AL_GR_LargestPermutation", "AL_GR_LuckBalance", "AL_GR_MarcsCakewalk",
+            "AL_GR_MarkAndToys", "AL_GR_MaximumPerimeterTriangle", "AL_GR_MaxMin",
+            "AL_GR_MinimumAbsoluteDifferenceInAnArray", "AL_GR_PermutingTwoArrays", "AL_GR_PriyankaAndToys",
+            "AL_GR_ReverseShuffleMerge", "AL_GR_SherlockAndMiniMax", "AL_GR_SherlockAndTheBeast",
+            "AL_GR_TeamFormation");
     private final String PROBLEM_TYPE = "Greedy";
     private final String TYPE_INITIAL = "GR";
     private final String PROBLEM_CATEGORY = "Algorithm";
-    private final int TOTAL_PROBLEM = 0;
+    private final int TOTAL_PROBLEM = 22;
 
     //Private constructor for singleton class.
     private GreedyData(){

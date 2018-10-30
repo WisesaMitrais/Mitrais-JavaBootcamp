@@ -7,13 +7,14 @@ public class NPCompleteData implements Data {
 
     private static NPCompleteData npSingleton = null; //The singleton class.
     private final List<Integer> PROBLEM_ID = Arrays.asList(
-            11301);
+            10801, 10802, 10803, 10804);
     private final List<String> PROBLEM_NAME = Arrays.asList(
-            "");
+            "AL_NP_SamsPuzzle(Approximate)", "AL_NP_SpiesRevised", "AL_NP_TBSProblem",
+            "AL_NP_WalkingTheApproximateLongestPath");
     private final String PROBLEM_TYPE = "NP Complete";
     private final String TYPE_INITIAL = "NP";
     private final String PROBLEM_CATEGORY = "Algorithm";
-    private final int TOTAL_PROBLEM = 0;
+    private final int TOTAL_PROBLEM = 4;
 
     //Private constructor for singleton class.
     private NPCompleteData(){

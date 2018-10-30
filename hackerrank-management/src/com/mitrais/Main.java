@@ -20,7 +20,7 @@ interface Function<T, R>{
 
 class Java8Process {
 
-//    private AlgorithmProblem algorithmProblem = new AlgorithmProblem();
+    private AlgorithmProblem algorithmProblem = new AlgorithmProblem();
     private DataStructureProblem dataStructureProblem = new DataStructureProblem();
     private List<List<ProblemModel>> listOfProblemLists = new ArrayList<>();
     private List<ProblemModel> problemList = new ArrayList<>();
@@ -29,7 +29,7 @@ class Java8Process {
     private int idxInitial = -1;
 
     public void setProblemCategory(int category){
-        if(category == 1) listOfProblemLists = dataStructureProblem.getAllProblem(); //its should be algorithmProblem.
+        if(category == 1) listOfProblemLists = algorithmProblem.getAllProblem();
         else if(category == 2) listOfProblemLists = dataStructureProblem.getAllProblem();
         else System.out.println("Category not found !!");
     }
@@ -74,8 +74,8 @@ class Java8Process {
             int result;
             Function<String, Integer> gII = (init) -> {
                 int temp;
-                if(dataStructureProblem.INITIAL.contains(initial) == true){ //its should be algorithmProblem.
-                    temp = dataStructureProblem.INITIAL.indexOf(initial); //its should be algorithmProblem.
+                if(algorithmProblem.INITIAL.contains(initial) == true){
+                    temp = algorithmProblem.INITIAL.indexOf(initial);
                 }else{
                     temp = dataStructureProblem.INITIAL.indexOf(initial);
                 }
@@ -133,6 +133,9 @@ public class Main {
     //Logic begin here.
     public static void runningExperiment(){
         Java8Process java8Process = new Java8Process();
+        java8Process.setProblemCategory(1);
+        java8Process.callPrintAllProblem();
+        System.out.println("\n\n\n");
         java8Process.setProblemCategory(2);
         java8Process.callPrintAllProblem();
     }

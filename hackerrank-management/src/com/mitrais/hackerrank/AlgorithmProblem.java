@@ -9,7 +9,7 @@ public class AlgorithmProblem extends GeneralMethodProblem {
     private ProblemModel problemModel;
     private final List<List<ProblemModel>> listOfProblemLists = new ArrayList<>();
     public final List<String> INITIAL = Arrays.asList(
-            "BM", "CA", "DP", "GT", "GH", "GR", "IM", "NP", "RC", "SE", "ST", "SG", "WU");
+            "BM", "CA", "DP", "GT", "GH", "GR", "IM", "NP", "RC", "SR", "ST", "SG", "WU");
     private int index, result;
     private boolean isInjected = false;
 
@@ -23,7 +23,7 @@ public class AlgorithmProblem extends GeneralMethodProblem {
     }
 
     @Override
-    int getTotalProblem() {
+    public int getTotalProblem() {
         try{
             result = 0;
             for(int i = 0; i < listOfProblemLists.size(); i++){

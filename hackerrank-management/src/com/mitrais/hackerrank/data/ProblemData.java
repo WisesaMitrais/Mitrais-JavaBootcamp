@@ -62,7 +62,7 @@ public class ProblemData {
                 break;
             case "TR": data = TrieData.getInstance();
                 break;
-            default: System.out.println("Problem not found !!");
+            default: System.out.println("Problem initial " + problemInitial + " not found !!");
         }
         return data;
     }
