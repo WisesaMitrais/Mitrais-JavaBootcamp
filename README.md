@@ -61,7 +61,7 @@ Keypoints :
 1. Able to use advanced try-catch block, finally, multicatch, try-with-resources
 2. Able to use Paths, File class utility
 3. Able to implement stream for File I/O processing
-#### Task Concurrency & Parallel | 30/10/2018 - Now
+### Task Concurrency & Parallel | 30/10/2018 - Now
 Keypoints :
 1. Understand and able to use fork/join framework
 2. Abe to use Executors utility class
