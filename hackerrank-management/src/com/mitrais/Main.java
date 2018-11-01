@@ -1,6 +1,7 @@
 package com.mitrais;
 
 import com.mitrais.hackerrank.*;
+import com.mitrais.hackerrank.procedure.multithreading.*;
 
 import java.text.*;
 import java.util.*;
@@ -221,7 +222,7 @@ public class Main {
 
     //Logic begin here.
     public static void runningExperiment(){
-        multithreadExperiment();
+        forkJoinExperiment();
     }
 
     public static void multithreadExperiment(){
@@ -231,5 +232,11 @@ public class Main {
         ExecutorService taskList = Executors.newFixedThreadPool(poolSize);
         taskList.execute(() -> classExperiment1.start());
         taskList.execute(() -> classExperiment2.start());
+    }
+
+    public static void forkJoinExperiment(){
+        final ForkJoinPool FORK_JOIN_POOL = new ForkJoinPool();
+        SimpleCalculationForkJoin simpleCalculationForkJoin = new SimpleCalculationForkJoin(1, 100);
+        System.out.println(FORK_JOIN_POOL.invoke(simpleCalculationForkJoin));
     }
 }
