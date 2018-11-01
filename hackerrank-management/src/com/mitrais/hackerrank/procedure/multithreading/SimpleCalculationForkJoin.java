@@ -5,32 +5,38 @@ import java.util.concurrent.*;
 public class SimpleCalculationForkJoin extends RecursiveTask<Long> {
 
     private long result = 0;
-    private int base, n, parallelCutOff = 50;
+    private int start, iteration, counter, parallelCutOff = 50;
 
-    public SimpleCalculationForkJoin(int base, int n) {
-        this.base = base;
-        this.n = n;
+    public SimpleCalculationForkJoin(int start, int iteration) {
+        this.start = start;
+        this.iteration = iteration;
     }
 
     @Override
     protected Long compute() {
-        if(n <= parallelCutOff){
-            result = additionRecursive(base, n);
+        if((iteration - start) <= parallelCutOff){
+            result = additionRecursive(start, iteration);
             return result;
         }else{
-            int middleIndex = n / 2;
-            SimpleCalculationForkJoin leftTask = new SimpleCalculationForkJoin(base, middleIndex);
-            SimpleCalculationForkJoin rightTask = new SimpleCalculationForkJoin(middleIndex + 1, n);
+            int middleIteration = getMiddleIteration(start, iteration);
+            System.out.println(start + " - " + (middleIteration - 1) + " AND " + (middleIteration) + " - " + iteration);
+            SimpleCalculationForkJoin leftTask = new SimpleCalculationForkJoin(start, middleIteration - 1);
+            SimpleCalculationForkJoin rightTask = new SimpleCalculationForkJoin(middleIteration, iteration);
             leftTask.fork();
-            long leftTaskResult = leftTask.join();
-            long righTaskResult = rightTask.compute();
-            result = righTaskResult + leftTaskResult;
+            result = leftTask.join() + rightTask.compute();
             return result;
         }
     }
 
-    public long additionRecursive(long base, long n){
-        if(n == base) return base;
-        else return n + additionRecursive(base, n - 1);
+    public long additionRecursive(int start, int iteration){
+        if(start == iteration) return start;
+        else return start + additionRecursive(start + 1, iteration);
+    }
+
+    public int getMiddleIteration(int start, int iteration){
+        counter = 0;
+        for(int i = start; i <= iteration; i++) counter++;
+        counter /= 2;
+        return start + counter;
     }
 }

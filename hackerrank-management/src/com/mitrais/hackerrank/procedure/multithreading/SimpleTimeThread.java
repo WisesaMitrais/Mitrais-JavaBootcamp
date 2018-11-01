@@ -2,12 +2,12 @@ package com.mitrais.hackerrank.procedure.multithreading;
 
 import java.util.*;
 
-public class SimpleTimeThreading implements Runnable {
+public class SimpleTimeThread implements Runnable {
 
     private final Thread timeThread;
     int[] time = {0, 0, 0, 0, 0, 0}; //For hh:mm:ss, ex: 08:23:12.
 
-    public SimpleTimeThreading(){
+    public SimpleTimeThread(){
         this.timeThread = new Thread(this);
     }
 

@@ -213,9 +213,16 @@ class DataStructureProblemWithThread implements Runnable {
 
 public class Main {
 
+    public static Date date = new Date();
+    public static SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+    public static Java8ProcessWithoutThread java8ProcessWithoutThread = new Java8ProcessWithoutThread();
+    public static AlgorithmProblemWithThread alThread = new AlgorithmProblemWithThread();
+    public static DataStructureProblemWithThread dsThread = new DataStructureProblemWithThread();
+    public static ExecutorService taskList;
+    public static final ForkJoinPool FORK_JOIN_POOL = new ForkJoinPool();
+    public static SimpleCalculationForkJoin simpleCalculationForkJoin;
+
     public static void main(String[] args) {
-        Date date = new Date();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         System.out.println(dateFormat.format(date) + " | Java-Basic running..");
         runningExperiment();
     }
@@ -225,18 +232,26 @@ public class Main {
         forkJoinExperiment();
     }
 
+    public static void implementJava8(){
+        java8ProcessWithoutThread.setProblemCategory(1);
+        java8ProcessWithoutThread.callPrintAllProblem();
+        java8ProcessWithoutThread.callPrintAllProblem("WU");
+        java8ProcessWithoutThread.callPrintSingleProblem("WU", "AL_WU_MiniMaxSum");
+        java8ProcessWithoutThread.setProblemCategory(2);
+        java8ProcessWithoutThread.callPrintAllProblem();
+        java8ProcessWithoutThread.callPrintAllProblem("AR");
+        java8ProcessWithoutThread.callPrintSingleProblem("AR", "DS_AR_LeftRotation");
+    }
+
     public static void multithreadExperiment(){
-        AlgorithmProblemWithThread classExperiment1 = new AlgorithmProblemWithThread();
-        DataStructureProblemWithThread classExperiment2 = new DataStructureProblemWithThread();
         int poolSize = 2; //Number of simultaneous threads.
-        ExecutorService taskList = Executors.newFixedThreadPool(poolSize);
-        taskList.execute(() -> classExperiment1.start());
-        taskList.execute(() -> classExperiment2.start());
+        taskList = Executors.newFixedThreadPool(poolSize);
+        taskList.execute(() -> alThread.start());
+        taskList.execute(() -> dsThread.start());
     }
 
     public static void forkJoinExperiment(){
-        final ForkJoinPool FORK_JOIN_POOL = new ForkJoinPool();
-        SimpleCalculationForkJoin simpleCalculationForkJoin = new SimpleCalculationForkJoin(1, 100);
+        simpleCalculationForkJoin = new SimpleCalculationForkJoin(1, 100);
         System.out.println(FORK_JOIN_POOL.invoke(simpleCalculationForkJoin));
     }
 }
