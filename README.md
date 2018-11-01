@@ -61,8 +61,15 @@ Keypoints :
 1. Able to use advanced try-catch block, finally, multicatch, try-with-resources
 2. Able to use Paths, File class utility
 3. Able to implement stream for File I/O processing
-### Task Concurrency & Parallel | 30/10/2018 - Now
+### Task Concurrency & Parallel | 30/10/2018 - 1/11/2018 (2 days 4 hours)
 Keypoints :
 1. Understand and able to use fork/join framework
 2. Abe to use Executors utility class
 3. Understand concurrent vs parallel
+### Task Java JDBC | 1/11/2018 - Now
+1. Understand types of JDBC
+2. Able to create connection to several database types
+3. Understand usage of Connection, Statement, PreparedStatement, ResultSet class
+4. Able to perform CRUD operation
+5. Able to use transaction
+6. Able to implement batch operation
