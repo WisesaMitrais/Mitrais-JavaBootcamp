@@ -1,13 +1,10 @@
 package com.mitrais;
 
 import com.mitrais.hackerrank.*;
-import com.mitrais.hackerrank.data.algorithm.StringsData;
-import com.mitrais.hackerrank.solution.algorithm.warmup.*;
-import com.mitrais.hackerrank.solution.algorithm.implementation.*;
-import com.mitrais.hackerrank.solution.datastructure.arrays.*;
-import com.mitrais.hackerrank.solution.datastructure.arrays.*;
+
 import java.text.*;
 import java.util.*;
+import java.util.concurrent.*;
 import java.util.stream.*;
 
 interface Consumer<T> {
@@ -18,7 +15,7 @@ interface Function<T, R>{
     R apply(T t);
 }
 
-class Java8Process {
+class Java8ProcessWithoutThread {
 
     private AlgorithmProblem algorithmProblem = new AlgorithmProblem();
     private DataStructureProblem dataStructureProblem = new DataStructureProblem();
@@ -47,7 +44,7 @@ class Java8Process {
     }
 
     //Inner class for lambda expression feature and stream api.
-    private class ImplementJava8{
+    private class ImplementJava8 {
 
         private void printAllProblem(){
             Consumer<List<List<ProblemModel>>> pAP = (lopl) -> {
@@ -120,7 +117,7 @@ class Java8Process {
                                 " | " + result.get(i).getProblemCategory());
                     }
                 }catch (Exception ex){
-                    System.out.println(ex);
+                    ex.printStackTrace();
                 }
             };
             pSP.accept(name);
@@ -128,22 +125,111 @@ class Java8Process {
     }
 }
 
-public class Main {
+class AlgorithmProblemWithThread implements Runnable {
 
-    //Logic begin here.
-    public static void runningExperiment(){
-        Java8Process java8Process = new Java8Process();
-        java8Process.setProblemCategory(1);
-        java8Process.callPrintAllProblem();
-        System.out.println("\n\n\n");
-        java8Process.setProblemCategory(2);
-        java8Process.callPrintAllProblem();
+    private AlgorithmProblem algorithmProblem = new AlgorithmProblem();
+    private List<List<ProblemModel>> listOfALProblemLists = new ArrayList<>();
+    private List<ProblemModel> problemList = new ArrayList<>();
+    private ProblemModel problemModel = null;
+    private Thread algorithmThread;
+
+    public void start(){
+        algorithmThread = new Thread(this);
+        algorithmThread.start();
     }
+
+    @Override
+    public void run() {
+        System.out.println("Thread Testing.");
+        listOfALProblemLists = algorithmProblem.getAllProblem();
+        printAllProblem(listOfALProblemLists);
+    }
+
+    private void printAllProblem(List<List<ProblemModel>> listOfProblemLists){
+        Consumer<List<List<ProblemModel>>> pAP = (lopl) -> {
+            System.out.println("### Problem in " + lopl.get(0).get(0).getProblemCategory() + " ###");
+            try {
+                for(int i = 0; i < lopl.size(); i++){
+                    problemList = lopl.get(i);
+                    System.out.println("(" + (i+1) + ") " + problemList.get(0).getProblemType() + ":");
+                    for(int j = 0; j < problemList.size(); j++){
+                        problemModel = problemList.get(j);
+                        System.out.println((j+1) + " | " + problemModel.getProblemID() +
+                                " | " + problemModel.getProblemName());
+                        algorithmThread.sleep(1500);
+                    }
+                }
+            }catch (Exception ex){
+                System.out.println(ex);
+            }
+        };
+        pAP.accept(listOfProblemLists);
+    }
+}
+
+class DataStructureProblemWithThread implements Runnable {
+
+    private DataStructureProblem dataStructureProblem = new DataStructureProblem();
+    private List<List<ProblemModel>> listOfDSProblemLists = new ArrayList<>();
+    private List<ProblemModel> problemList = new ArrayList<>();
+    private ProblemModel problemModel = null;
+    private Thread dataStructureThread;
+
+    public void start(){
+        dataStructureThread = new Thread(this);
+        dataStructureThread.start();
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Thread Testing.");
+        listOfDSProblemLists = dataStructureProblem.getAllProblem();
+        printAllProblem(listOfDSProblemLists);
+
+    }
+
+    private void printAllProblem(List<List<ProblemModel>> listOfProblemLists){
+        Consumer<List<List<ProblemModel>>> pAP = (lopl) -> {
+            System.out.println("### Problem in " + lopl.get(0).get(0).getProblemCategory() + " ###");
+            try {
+                for(int i = 0; i < lopl.size(); i++){
+                    problemList = lopl.get(i);
+                    System.out.println("(" + (i+1) + ") " + problemList.get(0).getProblemType() + ":");
+                    for(int j = 0; j < problemList.size(); j++){
+                        problemModel = problemList.get(j);
+                        System.out.println((j+1) + " | " + problemModel.getProblemID() +
+                                " | " + problemModel.getProblemName());
+                        dataStructureThread.sleep(1000);
+                    }
+                }
+            }catch (Exception ex){
+                System.out.println(ex);
+            }
+        };
+        pAP.accept(listOfProblemLists);
+    }
+}
+
+public class Main {
 
     public static void main(String[] args) {
         Date date = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        System.out.println(dateFormat.format(date) + " | Java-Basic running..\n");
+        System.out.println(dateFormat.format(date) + " | Java-Basic running..");
         runningExperiment();
+    }
+
+    //Logic begin here.
+    public static void runningExperiment(){
+        multithreadExperiment();
+    }
+
+    public static void multithreadExperiment(){
+        AlgorithmProblemWithThread classExperiment1 = new AlgorithmProblemWithThread();
+        DataStructureProblemWithThread classExperiment2 = new DataStructureProblemWithThread();
+        int poolSize = 2; //Number of simultaneous threads.
+        ExecutorService taskList = Executors.newFixedThreadPool(poolSize);
+        taskList.execute(() -> classExperiment1.start());
+        taskList.execute(() -> classExperiment2.start());
     }
 }

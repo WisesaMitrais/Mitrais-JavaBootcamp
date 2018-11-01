@@ -12,48 +12,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mitrais/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="55" column="23" lean-forward="false" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
+              <caret line="216" column="31" lean-forward="false" selection-start-line="216" selection-start-column="31" selection-end-line="216" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1317#1318#0" expanded="true" />
-                <element signature="e#1365#1366#0" expanded="true" />
-                <element signature="e#1419#1420#0" expanded="true" />
-                <element signature="e#1474#1475#0" expanded="true" />
+                <element signature="class#Java8ProcessWithoutThread#0" expanded="false" />
+                <element signature="e#1052#1053#0" expanded="true" />
+                <element signature="e#1100#1101#0" expanded="true" />
+                <element signature="e#1154#1155#0" expanded="true" />
+                <element signature="e#1209#1210#0" expanded="true" />
+                <element signature="class#AlgorithmProblemWithThread#0" expanded="false" />
+                <element signature="class#DataStructureProblemWithThread#0" expanded="false" />
+                <element signature="e#8716#8717#0" expanded="true" />
+                <element signature="e#8755#8756#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StacksData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/data/datastructure/StacksData.java">
+      <file leaf-file-name="SimpleTimeThreading.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/procedure/multithreading/SimpleTimeThreading.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StackProcedure.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/procedure/datastructure/StackProcedure.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stacks01.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/solution/datastructure/stacks/Stacks01.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="408">
+              <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+              <folding>
+                <element signature="e#272#273#0" expanded="true" />
+                <element signature="e#322#323#0" expanded="true" />
+                <element signature="e#348#349#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,11 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/solution/algorithm/warmup/Warmup01.java" />
-        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/solution/algorithm/warmup/Warmup02.java" />
-        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/solution/algorithm/warmup/Warmup05.java" />
-        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/solution/algorithm/warmup/Warmup03.java" />
-        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/solution/algorithm/warmup/Warmup04.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/solution/algorithm/warmup/Warmup10.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/solution/algorithm/warmup/Warmup09.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/solution/algorithm/warmup/Warmup08.java" />
@@ -134,8 +119,13 @@
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/algorithm/StringsData.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/data/ProblemData.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/AlgorithmProblem.java" />
-        <option value="$PROJECT_DIR$/src/com/mitrais/Main.java" />
         <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/solution/datastructure/stacks/Stacks01.java" />
+        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/procedure/multithreading/SimpleMultithreading.java" />
+        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/procedure/multithreading/DateTimeThreading.java" />
+        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/procedure/multithreading/TimeSetting.java" />
+        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/procedure/multithreading/DateTimeSetting.java" />
+        <option value="$PROJECT_DIR$/src/com/mitrais/hackerrank/procedure/multithreading/SimpleTimeThreading.java" />
+        <option value="$PROJECT_DIR$/src/com/mitrais/Main.java" />
       </list>
     </option>
   </component>
@@ -191,14 +181,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="mitrais" type="462c0819:PsiDirectoryNode" />
               <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackerrank-management" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mitrais" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
               <item name="procedure" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -207,7 +189,26 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="mitrais" type="462c0819:PsiDirectoryNode" />
               <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="solution" type="462c0819:PsiDirectoryNode" />
+              <item name="procedure" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hackerrank-management" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mitrais" type="462c0819:PsiDirectoryNode" />
+              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
+              <item name="procedure" type="462c0819:PsiDirectoryNode" />
+              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hackerrank-management" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mitrais" type="462c0819:PsiDirectoryNode" />
+              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
+              <item name="procedure" type="462c0819:PsiDirectoryNode" />
+              <item name="multithreading" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
@@ -216,7 +217,6 @@
               <item name="mitrais" type="462c0819:PsiDirectoryNode" />
               <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
               <item name="solution" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
@@ -334,7 +334,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37285492" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" x="684" y="31" width="681" height="706" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52886117" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" x="684" y="31" width="681" height="706" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22327965" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
@@ -360,13 +360,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/solution/algorithm/warmup/Warmup01.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/solution/algorithm/warmup/Warmup05.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -693,21 +686,7 @@
         <state relative-caret-position="238">
           <caret line="44" column="15" lean-forward="true" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mitrais/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="55" column="23" lean-forward="false" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1317#1318#0" expanded="true" />
-            <element signature="e#1365#1366#0" expanded="true" />
-            <element signature="e#1419#1420#0" expanded="true" />
-            <element signature="e#1474#1475#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -728,18 +707,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/procedure/datastructure/StackProcedure.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/data/datastructure/StacksData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        <state relative-caret-position="153">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/data/datastructure/StacksData.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/procedure/datastructure/StackProcedure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        <state relative-caret-position="51">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -749,6 +728,38 @@
         <state relative-caret-position="153">
           <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/procedure/multithreading/SimpleTimeThreading.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding>
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mitrais/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="216" column="31" lean-forward="false" selection-start-line="216" selection-start-column="31" selection-end-line="216" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#Java8ProcessWithoutThread#0" expanded="false" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
+            <element signature="e#1209#1210#0" expanded="true" />
+            <element signature="class#AlgorithmProblemWithThread#0" expanded="false" />
+            <element signature="class#DataStructureProblemWithThread#0" expanded="false" />
+            <element signature="e#8716#8717#0" expanded="true" />
+            <element signature="e#8755#8756#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
