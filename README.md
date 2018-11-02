@@ -66,10 +66,28 @@ Keypoints :
 1. Understand and able to use fork/join framework
 2. Abe to use Executors utility class
 3. Understand concurrent vs parallel
-### Task Java JDBC | 1/11/2018 - Now
+### Task Java JDBC | 1/11/2018 - 2/11/2018 (1 day 4 hours)
+Keypoints
 1. Understand types of JDBC
 2. Able to create connection to several database types
 3. Understand usage of Connection, Statement, PreparedStatement, ResultSet class
 4. Able to perform CRUD operation
 5. Able to use transaction
 6. Able to implement batch operation
+## Module JEE
+### Task Servlet & JSP | 2/11/2018 - Now
+Keypoints:
+1. Understand definition of Servlet and JSP
+2. Able to explain Servlet vs JSP
+3. Able to configure web.xml for servlet 2.5 and 3.0
+4. Understand several types of Servlet 
+5. Able to configure servlet using annotation
+6. Able to handle http request and response, include form parameter, header
+7. Able to manipulate http cookies
+8. Understand how to handle http session
+9. Understand how to use scripting in JSP
+10. Understand how to use JavaBean(class) in JSP
+11. Able to implement MVC pattern
+12. Understand usage of Expression Language in JSP
+13. Understand how to use JSTL(JSP Standard Tag Lib)
+14. Able to create custom JSTL
