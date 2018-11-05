@@ -1,10 +1,13 @@
 package com.mitrais;
 
 import com.mitrais.hackerrank.*;
+import com.mitrais.hackerrank.data.*;
 import com.mitrais.hackerrank.procedure.multithreading.*;
 
+import java.sql.*;
 import java.text.*;
 import java.util.*;
+import java.util.Date;
 import java.util.concurrent.*;
 import java.util.stream.*;
 
@@ -221,18 +224,22 @@ public class Main {
     public static ExecutorService taskList;
     public static final ForkJoinPool FORK_JOIN_POOL = new ForkJoinPool();
     public static SimpleCalculationForkJoin simpleCalculationForkJoin;
+    public static Database database = new Database();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException, Exception{
         System.out.println(dateFormat.format(date) + " | Java-Basic running..");
         runningExperiment();
     }
 
     //Logic begin here.
-    public static void runningExperiment(){
-        forkJoinExperiment();
+    public static void runningExperiment() throws SQLException, Exception{
+//        java8Experiment();
+//        multithreadExperiment();
+//        forkJoinExperiment();
+        databaseExperiment();
     }
 
-    public static void implementJava8(){
+    public static void java8Experiment(){
         java8ProcessWithoutThread.setProblemCategory(1);
         java8ProcessWithoutThread.callPrintAllProblem();
         java8ProcessWithoutThread.callPrintAllProblem("WU");
@@ -253,5 +260,9 @@ public class Main {
     public static void forkJoinExperiment(){
         simpleCalculationForkJoin = new SimpleCalculationForkJoin(1, 100);
         System.out.println(FORK_JOIN_POOL.invoke(simpleCalculationForkJoin));
+    }
+
+    public static void databaseExperiment() throws SQLException, Exception{
+        database.showAllTables();
     }
 }
