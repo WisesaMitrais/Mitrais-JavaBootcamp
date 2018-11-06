@@ -226,17 +226,19 @@ public class Main {
     public static SimpleCalculationForkJoin simpleCalculationForkJoin;
     public static Database database = new Database();
 
-    public static void main(String[] args) throws SQLException, Exception{
+    public static void main(String[] args) throws Exception{
         System.out.println(dateFormat.format(date) + " | Java-Basic running..");
         runningExperiment();
     }
 
     //Logic begin here.
-    public static void runningExperiment() throws SQLException, Exception{
+    public static void runningExperiment() throws Exception{
 //        java8Experiment();
 //        multithreadExperiment();
 //        forkJoinExperiment();
-        databaseExperiment();
+//        databaseExperiment();
+//        database.showAllProblems();
+        System.out.println("\n - Experiment Done - ");
     }
 
     public static void java8Experiment(){
@@ -262,7 +264,23 @@ public class Main {
         System.out.println(FORK_JOIN_POOL.invoke(simpleCalculationForkJoin));
     }
 
-    public static void databaseExperiment() throws SQLException, Exception{
-        database.showAllTables();
+    public static void databaseExperiment() throws Exception{
+        AlgorithmProblem algorithmProblem = new AlgorithmProblem();
+        DataStructureProblem dataStructureProblem = new DataStructureProblem();
+        List<List<ProblemModel>> listOfProblemLists;
+        int type  = 101;
+        listOfProblemLists = algorithmProblem.getAllProblem();
+        for (int i = 0; i < listOfProblemLists.size(); i++){
+            database.insertProblemData(listOfProblemLists.get(i), type, 1);
+            type++;
+        }
+        System.out.println("All algorithms done!");
+        type = 201;
+        listOfProblemLists = dataStructureProblem.getAllProblem();
+        for (int i = 0; i < listOfProblemLists.size(); i++){
+            database.insertProblemData(listOfProblemLists.get(i), type, 2);
+            type++;
+        }
+        System.out.println("All data structures done!");
     }
 }

@@ -15,7 +15,6 @@ public class ProblemModel {
         this.problemID = problemID;
         this.problemName = problemName;
         this.problemType = problemType;
-
         this.typeInitial = typeInitial;
         this.problemCategory = problemCategory;
         this.solutionID = 99;

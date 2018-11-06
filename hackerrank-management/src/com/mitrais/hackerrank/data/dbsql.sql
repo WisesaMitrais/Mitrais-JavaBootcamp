@@ -1,6 +1,6 @@
 /*Database declaration*/
 create database hackerrankmanage;
-use hackerrankmanage;
+use hackerrankmanagprob_cate;
 
 
 
@@ -64,6 +64,7 @@ insert into prob_mod(id, name, type, category, solution, is_solved) values
 
 
 /*Basic table manipulation*/
+show tables;
 select * from prob_cat;
 drop table prob_cat;
 select * from prob_type;
@@ -74,10 +75,10 @@ drop table prob_mod;
 
 
 /*Custome table manipulation*/
-select distinct count(prob_cat.name) 
-as sum_algorithm, prob_cat.name 
-from prob_mod left join prob_cat 
-on prob_mod.category = prob_cat.id;
+select prob_cat.name, count(*) as 'total' 
+from prob_mod left join prob_cat on prob_mod.category = prob_cat.id
+group by prob_cat.name;
+
 
 
 /*Other setting*/
