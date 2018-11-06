@@ -79,6 +79,16 @@ select prob_cat.name, count(*) as 'total'
 from prob_mod left join prob_cat on prob_mod.category = prob_cat.id
 group by prob_cat.name;
 
+select prob_mod.id as 'problemID', 
+       prob_mod.name as 'problemName', 
+       prob_type.type as 'problemType', 
+       prob_type.type_init as 'typeInitial', 
+       prob_cat.name as 'problemCategory', 
+       prob_mod.solution as 'solutionID', 
+       prob_mod.is_solved as 'isCompleteSolved'
+from prob_mod left join prob_type on prob_mod.type = prob_type.id
+			  left join prob_cat on prob_mod.category = prob_cat.id;
+
 
 
 /*Other setting*/
