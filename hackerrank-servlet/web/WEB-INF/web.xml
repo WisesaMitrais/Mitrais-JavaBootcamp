@@ -4,29 +4,44 @@
         <session-timeout>30</session-timeout>
     </session-config>
     
-    <servlet>
+    
+<!--    <servlet>
         <servlet-name>HomeServlet</servlet-name>
         <servlet-class>HomeServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ProblemServlet</servlet-name>
-        <servlet-class>ProblemServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CategoryServlet</servlet-name>
         <servlet-class>CategoryServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>TypeServlet</servlet-name>
+        <servlet-class>TypeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProblemServlet</servlet-name>
+        <servlet-class>ProblemServlet</servlet-class>
+    </servlet>
+    
     
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ProblemServlet</servlet-name>
-        <url-pattern>/problem</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>CategoryServlet</servlet-name>
         <url-pattern>/category</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TypeServlet</servlet-name>
+        <url-pattern>/type</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProblemServlet</servlet-name>
+        <url-pattern>/problem</url-pattern>
+    </servlet-mapping>-->
+    
+    
+    <welcome-file-list>
+        <welcome-file>JSP/index.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>

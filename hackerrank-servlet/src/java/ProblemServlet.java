@@ -1,42 +1,44 @@
+import logic.*;
+import bean.*;
+
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
+import java.util.*;
 
 @WebServlet(urlPatterns = {"/problem"})
 public class ProblemServlet extends HttpServlet {
-
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ProblemServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ProblemServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
+    
+    private PrintWriter out;
+    private final Database database = new Database();
+    private List<Problem> problemList = new ArrayList<>();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        response.setContentType("text/html;charset=UTF-8");
+        out = response.getWriter();
+        String paramCat = request.getParameter("category");
+        String paramType = request.getParameter("type");
+        try{
+            if("0".equals(paramCat) && "0".equals(paramType)){
+                problemList = database.getAllProblem();
+            }
+        }catch(Exception ex){
+            System.out.println(ex);
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        response.setContentType("text/html;charset=UTF-8");
+        out = response.getWriter();
     }
 
     @Override
     public String getServletInfo() {
-        return "Short description";
+        return "This is Problem Servlet to handle HackerRank Problems.";
     }
 }

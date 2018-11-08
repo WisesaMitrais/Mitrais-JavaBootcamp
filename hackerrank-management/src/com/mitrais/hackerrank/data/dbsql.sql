@@ -1,6 +1,6 @@
 /*Database declaration*/
 create database hackerrankmanage;
-use hackerrankmanagprob_cate;
+use hackerrankmanage;
 
 
 
@@ -87,9 +87,16 @@ select prob_mod.id as 'problemID',
        prob_mod.solution as 'solutionID', 
        prob_mod.is_solved as 'isCompleteSolved'
 from prob_mod left join prob_type on prob_mod.type = prob_type.id
-			  left join prob_cat on prob_mod.category = prob_cat.id;
+			  left join prob_cat on prob_mod.category = prob_cat.id;              
+
+select max(id) as 'lastID' from prob_cat;
 
 
 
 /*Other setting*/
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'W!s3s4c0m3c0'; 
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'W!s3s4c0m3c0';
+
+
+/*Random Query*/
+update prob_cat set name='Algorithm' where id=1;
+delete from prob_type where id = 3;
