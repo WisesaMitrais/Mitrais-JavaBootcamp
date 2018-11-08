@@ -75,7 +75,7 @@ Keypoints
 5. Able to use transaction
 6. Able to implement batch operation
 ## Module JEE
-### Task Servlet & JSP | 2/11/2018 - Now
+### Task Servlet & JSP | 2/11/2018 - 8/11/2018 (4 days)
 Keypoints:
 1. Understand definition of Servlet and JSP
 2. Able to explain Servlet vs JSP
@@ -91,3 +91,15 @@ Keypoints:
 12. Understand usage of Expression Language in JSP
 13. Understand how to use JSTL(JSP Standard Tag Lib)
 14. Able to create custom JSTL
+## Module Build Tools
+### Task Maven
+Keypoints:
+1. Able to install and configure maven (proxy)
+2. Understand pom (project object model) structure e.g groupId, artifactId, version
+3. Understand maven build lifecycle
+4. Understand maven build profile
+5. Able to create profile for different environment e.g. dev, test, prod
+6. Understand maven repository concept and able to configure custom repository
+7. Understand maven plugin and able to use and configure common maven plugin such as: tomcat
+8. Understand maven archetype 
+9. Understand maven dependencies and able to manage project dependency using maven
