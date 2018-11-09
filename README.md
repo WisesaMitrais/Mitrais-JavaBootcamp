@@ -92,7 +92,7 @@ Keypoints:
 13. Understand how to use JSTL(JSP Standard Tag Lib)
 14. Able to create custom JSTL
 ## Module Build Tools
-### Task Maven
+### Task Maven | 9/11/2018 - Now
 Keypoints:
 1. Able to install and configure maven (proxy)
 2. Understand pom (project object model) structure e.g groupId, artifactId, version
@@ -103,3 +103,13 @@ Keypoints:
 7. Understand maven plugin and able to use and configure common maven plugin such as: tomcat
 8. Understand maven archetype 
 9. Understand maven dependencies and able to manage project dependency using maven
+## Module Testing
+### Task JUnit | 9/11/2018 - Now
+Keypoints:
+1. Able to run unit test using maven
+2. Understand and able to use Junit annotation such as @Before, @BeforeClass, @After, @AfterClass, @Test 
+3. Able to use Junit Assertion
+4. Understand and able to use TestSuite
+5. Able to create test with Exception
+6. Able to ignore some tests
+7. Able to use parameterized test
