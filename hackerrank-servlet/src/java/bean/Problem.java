@@ -46,7 +46,7 @@ public class Problem {
         return solutionID;
     }
 
-    public boolean isIsCompletedSolved() {
+    public boolean isCompletedSolved() {
         return isCompletedSolved;
     }
 }

@@ -5,17 +5,9 @@
     </session-config>
     
     
-<!--    <servlet>
+    <servlet>
         <servlet-name>HomeServlet</servlet-name>
         <servlet-class>HomeServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>CategoryServlet</servlet-name>
-        <servlet-class>CategoryServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>TypeServlet</servlet-name>
-        <servlet-class>TypeServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ProblemServlet</servlet-name>
@@ -28,17 +20,9 @@
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>CategoryServlet</servlet-name>
-        <url-pattern>/category</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>TypeServlet</servlet-name>
-        <url-pattern>/type</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>ProblemServlet</servlet-name>
         <url-pattern>/problem</url-pattern>
-    </servlet-mapping>-->
+    </servlet-mapping>
     
     
     <welcome-file-list>

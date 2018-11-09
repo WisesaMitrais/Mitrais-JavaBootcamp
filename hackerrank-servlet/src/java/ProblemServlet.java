@@ -21,9 +21,18 @@ public class ProblemServlet extends HttpServlet {
         out = response.getWriter();
         String paramCat = request.getParameter("category");
         String paramType = request.getParameter("type");
+        String submitVal = request.getParameter("submit");
         try{
-            if("0".equals(paramCat) && "0".equals(paramType)){
+            if("show".equals(submitVal) && "0".equals(paramCat) && "0".equals(paramType)){
                 problemList = database.getAllProblem();
+                System.out.println(problemList.get(0).getProblemID());
+                request.setAttribute("problemList", problemList.get(0).getProblemID());
+                request.getRequestDispatcher("/JSP/problem.jsp").forward(request, response);
+            }else{
+                //still wrong.
+                problemList = database.getAllProblem();
+                request.setAttribute("problemList", problemList);
+                request.getRequestDispatcher("/JSP/problem.jsp").forward(request, response);
             }
         }catch(Exception ex){
             System.out.println(ex);
