@@ -11,18 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Strings39.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mitrais/hackerrank/solution/algorithm/strings/Strings39.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -123,97 +112,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
-            <path>
-              <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackerrank-management" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackerrank-management" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackerrank-management" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mitrais" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackerrank-management" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mitrais" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackerrank-management" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mitrais" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackerrank-management" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mitrais" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackerrank-management" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mitrais" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="solution" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackerrank-management" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mitrais" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="solution" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackerrank-management" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mitrais" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="solution" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="strings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackerrank-management" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mitrais" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="solution" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="warmup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackerrank-management" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mitrais" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="solution" type="462c0819:PsiDirectoryNode" />
-              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
-            </path>
             <path>
               <item name="hackerrank-management" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
@@ -303,7 +207,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -647,7 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="27" column="95" lean-forward="false" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="95" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -655,7 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,7 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
