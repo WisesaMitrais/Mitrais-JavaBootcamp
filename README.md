@@ -113,9 +113,9 @@ Keypoints:
 5. Able to create test with Exception
 6. Able to ignore some tests
 7. Able to use parameterized test
-#---------------------------------------------------------------#
+##
 ## Project Meratus Android App (13/11/2018 - 29/01/2019)
-#---------------------------------------------------------------#
+##
 ## Module Study Case
 ### Task RMS Web Application with Servlet & JSP | 30/01/2019 - Now
 Keypoints:
