@@ -39,7 +39,8 @@ public class UserDaoImpl implements UserDao{
     @Override
     public List<User> findAll(){
         List<User> result = new ArrayList<>();
-        try (Connection connection = DataSourceFactory.getConnection()){
+        try{
+            Connection connection = DataSourceFactory.getConnection();
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM user");
             while (rs.next()){
@@ -55,7 +56,8 @@ public class UserDaoImpl implements UserDao{
 
     @Override
     public boolean save(User user){
-        try (Connection connection = DataSourceFactory.getConnection()){
+        try{
+            Connection connection = DataSourceFactory.getConnection();
             PreparedStatement stmt = connection
                     .prepareStatement("INSERT INTO user VALUES (NULL, ?, ?)");
             stmt.setString(1, user.getUserName());
@@ -72,11 +74,13 @@ public class UserDaoImpl implements UserDao{
 
     @Override
     public boolean update(User user){
-        try (Connection connection = DataSourceFactory.getConnection()){
+        try{
+            Connection connection = DataSourceFactory.getConnection();
             PreparedStatement stmt = connection
                     .prepareStatement("UPDATE user SET user_name=?, password=? WHERE id=?");
             stmt.setString(1, user.getUserName());
             stmt.setString(2, user.getPassword());
+            stmt.setLong(3, user.getId());
             int i = stmt.executeUpdate();
             if(i == 1) {
                 return true;
@@ -89,7 +93,8 @@ public class UserDaoImpl implements UserDao{
 
     @Override
     public boolean delete(User user){
-        try (Connection connection = DataSourceFactory.getConnection()){
+        try{
+            Connection connection = DataSourceFactory.getConnection();
             PreparedStatement stmt = connection.prepareStatement("DELETE FROM user WHERE id=?");
             stmt.setLong(1, user.getId());
             int i = stmt.executeUpdate();

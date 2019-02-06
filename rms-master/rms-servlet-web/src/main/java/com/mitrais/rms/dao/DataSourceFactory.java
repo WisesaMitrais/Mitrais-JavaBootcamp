@@ -1,7 +1,6 @@
 package com.mitrais.rms.dao;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
-
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -18,10 +17,10 @@ public class DataSourceFactory{
         MysqlDataSource dataSource = new MysqlDataSource();
         // TODO: make these database setting configurable by moving to properties file
         dataSource.setDatabaseName("rmsdb");
-        dataSource.setServerName("192.168.99.100");
+        dataSource.setServerName("localhost");
         dataSource.setPort(3306);
-        dataSource.setUser("rms");
-        dataSource.setPassword("rms");
+        dataSource.setUser("root");
+        dataSource.setPassword("W!s3s4c0m3c0");
         this.dataSource = dataSource;
     }
 
@@ -29,6 +28,7 @@ public class DataSourceFactory{
      * Get a data source to database
      *
      * @return DataSource object
+     * @throws java.sql.SQLException
      */
     public static Connection getConnection() throws SQLException{
         return SingletonHelper.INSTANCE.dataSource.getConnection();
