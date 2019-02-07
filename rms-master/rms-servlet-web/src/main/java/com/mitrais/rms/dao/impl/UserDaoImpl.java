@@ -108,10 +108,11 @@ public class UserDaoImpl implements UserDao{
     }
 
     @Override
-    public Optional<User> findByUserName(String userName){
+    public Optional<User> findByUserData(String userName, String password){
         try (Connection connection = DataSourceFactory.getConnection()){
-            PreparedStatement stmt = connection.prepareStatement("SELECT * FROM user WHERE user_name=?");
+            PreparedStatement stmt = connection.prepareStatement("SELECT * FROM user WHERE user_name=? AND password=?");
             stmt.setString(1, userName);
+            stmt.setString(2, password);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()){
                 User user = new User(rs.getLong("id"), rs.getString("user_name"), rs.getString("password"));
@@ -120,7 +121,7 @@ public class UserDaoImpl implements UserDao{
         }catch (SQLException ex){
             ex.printStackTrace();
         }
-        return Optional.empty();
+        return null;
     }
 
     private static class SingletonHelper{

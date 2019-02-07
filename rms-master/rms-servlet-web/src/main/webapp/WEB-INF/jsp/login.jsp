@@ -33,7 +33,9 @@
                             <label class="mdl-textfield__label" for="userpass">Password</label>
                         </div>
                         <div class="mdl-card__actions">
-                            <div class="mdl-card__actions" style="color: #FF0000;">${errorMessage}</div>
+                            <% if(request.getAttribute("errorMessage") != null){ %>
+                                <div class="mdl-card__actions" style="color: #FF0000;">${errorMessage}</div>
+                            <% } %>
                             <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="submit">Log in</button>
                         </div>
                     </form>

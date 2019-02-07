@@ -1,6 +1,6 @@
 <%@ page language="java" pageEncoding="UTF-8" session="false"%>
 <!doctype html>
-<html lang="en">
+<html lang="en" style="background-color:blueviolet">
 <head>
   <meta charset="utf-8">
   <title>RMS</title>
