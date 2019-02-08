@@ -117,7 +117,33 @@ Keypoints:
 ## Project Meratus Android App (13/11/2018 - 29/01/2019)
 ##
 ## Module Study Case
-### Task RMS Web Application with Servlet & JSP | 30/01/2019 - Now
+### Task RMS Web App. with Servlet & JSP | 30/01/2019 - 7/02/2019
 Keypoints:
 1. Able to implement MVC pattern using Servlet & JSP
 2. Able to implement CRUD operation using JDBC
+## Module JEE
+### Task JPA Basic | 8/02/2019 - Now
+1. Able to describe Object Relational Mapping (ORM)
+2. Understand key concepts of the Java Persistence API (entity, entity manager, and persistence unit)
+3. Understand JPA Entities
+4. Difference between objects and entities
+5. Difference between persistent fields and properties, able to use common Java Persistence API annotations, such as @Entity, @Id, @Table, and @Column
+6. Understand JPA Entity Manager 
+7. Understand relationship between an entity manager, a persistence context, and a persistence unit, 
+8. Understand  difference between a container-managed entity manager and an application-managed entity manager
+9. Understand entity life cycle
+10. Understand how to define entity relationship
+11. Able to use one-to-one unidirectional associations
+12. Able to use one-to-one bidirectional associations
+13. Able to use many-to-one/one-to-many bidirectional associations
+14. Able to use many-to-many bidirectional associations
+15. Able to use many-to-many unidirectional associations
+16. Understand  fetch and cascade mode
+17. Understand entity inheritance 
+18. Understand inheritance hierarchy mapping strategies
+19. Able to use embedded entity
+20. Understand usage of enum and collections:  @Enumerated, @ElementCollection
+21. Able to query JPA entity by primary key, JPQL(Java Persistence Query Language), native query and Criteria API(SELECT, UPDATE, DELETE and using metamodel)
+22. Able to use the Java Persistence API from a servlet
+23. Understand transaction demarcation management
+24. Able to implement bean-managed transactions (BMT)
