@@ -92,7 +92,7 @@ Keypoints:
 13. Understand how to use JSTL(JSP Standard Tag Lib)
 14. Able to create custom JSTL
 ## Module Build Tools
-### Task Maven | 9/11/2018 - Now
+### Task Maven | 9/11/2018 - 12/11/2018 (2 days)
 Keypoints:
 1. Able to install and configure maven (proxy)
 2. Understand pom (project object model) structure e.g groupId, artifactId, version
@@ -104,7 +104,7 @@ Keypoints:
 8. Understand maven archetype 
 9. Understand maven dependencies and able to manage project dependency using maven
 ## Module Testing
-### Task JUnit | 9/11/2018 - 12/11/2018
+### Task JUnit | 12/11/2018 - 14/11/2018 (2 days)
 Keypoints:
 1. Able to run unit test using maven
 2. Understand and able to use Junit annotation such as @Before, @BeforeClass, @After, @AfterClass, @Test 
@@ -114,10 +114,10 @@ Keypoints:
 6. Able to ignore some tests
 7. Able to use parameterized test
 ##
-## Project Meratus Android App (13/11/2018 - 29/01/2019)
+### Project Meratus Android App (15/11/2018 - 29/01/2019)
 ##
 ## Module Study Case
-### Task RMS Web App. with Servlet & JSP | 30/01/2019 - 7/02/2019
+### Task RMS Web App. with Servlet & JSP | 30/01/2019 - 7/02/2019 (7 days)
 Keypoints:
 1. Able to implement MVC pattern using Servlet & JSP
 2. Able to implement CRUD operation using JDBC
