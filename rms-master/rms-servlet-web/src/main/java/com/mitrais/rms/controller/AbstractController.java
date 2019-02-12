@@ -8,7 +8,7 @@ public abstract class AbstractController extends HttpServlet {
 
     protected String getTemplatePath(String path){
         if (path.equalsIgnoreCase("/")){
-            return VIEW_PREFIX + path + "index" + VIEW_SUFFIX;
+            return VIEW_PREFIX + path + "login" + VIEW_SUFFIX;
         }else{
             return VIEW_PREFIX + path + VIEW_SUFFIX;
         }

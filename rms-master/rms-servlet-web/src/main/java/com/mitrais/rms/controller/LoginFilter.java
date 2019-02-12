@@ -4,37 +4,39 @@ import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
+@WebFilter(urlPatterns = "*")
 public class LoginFilter implements Filter {
     
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        throw new UnsupportedOperationException("Not supported yet.");
+        System.out.println("Init LoginFilter.");
     }
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response,
-            FilterChain chain) throws ServletException, IOException {    
-        System.out.println("Tes Filter");
+            FilterChain filterChain) throws ServletException, IOException {
         HttpServletRequest req = (HttpServletRequest) request;
-        HttpServletResponse res = (HttpServletResponse) response;
-        HttpSession currSession = req.getSession(false);
-        boolean active = currSession != null;
-        if(active){
-            chain.doFilter(request, response);
+        boolean isUserActive = req.getSession().getAttribute("currentuser") != null;
+        if(isUserActive){
+            System.out.println("Session New !");
+            filterChain.doFilter(request, response);
         }else{
-            res.sendRedirect("/rms-servlet-web/");
+            System.out.println("Session expired !");
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/login");
+            requestDispatcher.forward(req, response);
         }
     }
 
     @Override
     public void destroy() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        System.out.println("Destroy LoginFilter.");
     }
 }

@@ -42,6 +42,9 @@
                     </c:forEach>
                 </tbody>
             </table>
+            <% if(request.getAttribute("errorMessage") != null){ %>
+                <div class="mdl-card__actions" style="color: #FF0000;">${errorMessage}</div>
+            <% } %>
     	</main>
     </div>
     <script src="js/scripts.js"></script>

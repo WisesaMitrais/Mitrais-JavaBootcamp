@@ -1,6 +1,7 @@
 package com.mitrais.rms.model;
 
 public class User{
+
     private Long id;
     private String userName;
     private String password;

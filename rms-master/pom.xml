@@ -6,7 +6,9 @@
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>rms-servlet-web</module>
+        <module>
+            rms-servlet-web
+        </module>
     </modules>
     <name>rms Maven Webapp</name>
     <url>http://maven.apache.org</url>

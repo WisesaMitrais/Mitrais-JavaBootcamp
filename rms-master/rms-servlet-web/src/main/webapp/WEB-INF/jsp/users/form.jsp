@@ -57,6 +57,9 @@
                             </c:if>
                         </div>
                     </form>
+                    <% if(request.getAttribute("errorMessage") != null){ %>
+                        <div class="mdl-card__actions" style="color: #FF0000;">${errorMessage}</div>
+                    <% } %>
     		</div>
             </div>
     	</main>

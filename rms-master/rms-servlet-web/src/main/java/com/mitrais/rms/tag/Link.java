@@ -8,6 +8,7 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.io.IOException;
 
 public class Link extends SimpleTagSupport{
+
     private String href;
     private String type;
 

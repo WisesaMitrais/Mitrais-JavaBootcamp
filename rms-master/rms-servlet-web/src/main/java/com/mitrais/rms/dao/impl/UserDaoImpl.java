@@ -13,21 +13,39 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-/**
- *
- */
 public class UserDaoImpl implements UserDao{
-    
+
+    private final String SQL_FIND;
+    private final String SQL_FIND_ALL;
+    private final String SQL_SAVE;
+    private final String SQL_UPDATE;
+    private final String SQL_DELETE;
+    private final String SQL_FIND_USER_DATA;
+    private Connection conn;
+    private PreparedStatement preStmt;
+    private ResultSet rs;
+    private User user;
+
+    private UserDaoImpl() {
+        SQL_FIND = "SELECT * FROM rmsdb.user WHERE id=?";
+        SQL_FIND_ALL = "SELECT * FROM rmsdb.user";
+        SQL_SAVE = "INSERT INTO user VALUES (NULL, ?, ?)";
+        SQL_UPDATE = "UPDATE user SET user_name=?, password=? WHERE id=?";
+        SQL_DELETE = "DELETE FROM rmsdb.user WHERE id=?";
+        SQL_FIND_USER_DATA = "SELECT * FROM rmsdb.user WHERE user_name=? AND password=?";
+    }
+
     @Override
     public Optional<User> find(Long id){
-        try (Connection connection = DataSourceFactory.getConnection()){
-            PreparedStatement stmt = connection
-                    .prepareStatement("SELECT * FROM user WHERE id=?");
-            stmt.setLong(1, id);
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()){
-                User user = new User(rs.getLong("id"), 
-                        rs.getString("user_name"), rs.getString("password"));
+        try{
+            conn = DataSourceFactory.getConnection();
+            preStmt = conn.prepareStatement(SQL_FIND);
+            preStmt.setLong(1, id);
+            rs = preStmt.executeQuery();
+            if(rs.next()){
+                user = new User(rs.getLong("id"),
+                        rs.getString("user_name"),
+                        rs.getString("password"));
                 return Optional.of(user);
             }
         }catch (SQLException ex){
@@ -38,31 +56,31 @@ public class UserDaoImpl implements UserDao{
 
     @Override
     public List<User> findAll(){
-        List<User> result = new ArrayList<>();
+        List<User> users = new ArrayList<>();
         try{
-            Connection connection = DataSourceFactory.getConnection();
-            Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM user");
-            while (rs.next()){
-                User user = new User(rs.getLong("id"), 
-                        rs.getString("user_name"), rs.getString("password"));
-                result.add(user);
+            conn = DataSourceFactory.getConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(SQL_FIND_ALL);
+            while(rs.next()){
+                user = new User(rs.getLong("id"),
+                        rs.getString("user_name"),
+                        rs.getString("password"));
+                users.add(user);
             }
         }catch (SQLException ex){
             ex.printStackTrace();
         }
-        return result;
+        return users;
     }
 
     @Override
     public boolean save(User user){
         try{
-            Connection connection = DataSourceFactory.getConnection();
-            PreparedStatement stmt = connection
-                    .prepareStatement("INSERT INTO user VALUES (NULL, ?, ?)");
-            stmt.setString(1, user.getUserName());
-            stmt.setString(2, user.getPassword());
-            int i = stmt.executeUpdate();
+            conn = DataSourceFactory.getConnection();
+            preStmt = conn.prepareStatement(SQL_SAVE);
+            preStmt.setString(1, user.getUserName());
+            preStmt.setString(2, user.getPassword());
+            int i = preStmt.executeUpdate();
             if(i == 1) {
                 return true;
             }
@@ -75,13 +93,12 @@ public class UserDaoImpl implements UserDao{
     @Override
     public boolean update(User user){
         try{
-            Connection connection = DataSourceFactory.getConnection();
-            PreparedStatement stmt = connection
-                    .prepareStatement("UPDATE user SET user_name=?, password=? WHERE id=?");
-            stmt.setString(1, user.getUserName());
-            stmt.setString(2, user.getPassword());
-            stmt.setLong(3, user.getId());
-            int i = stmt.executeUpdate();
+            conn = DataSourceFactory.getConnection();
+            preStmt = conn.prepareStatement(SQL_UPDATE);
+            preStmt.setString(1, user.getUserName());
+            preStmt.setString(2, user.getPassword());
+            preStmt.setLong(3, user.getId());
+            int i = preStmt.executeUpdate();
             if(i == 1) {
                 return true;
             }
@@ -92,12 +109,12 @@ public class UserDaoImpl implements UserDao{
     }
 
     @Override
-    public boolean delete(User user){
+    public boolean delete(Long id){
         try{
-            Connection connection = DataSourceFactory.getConnection();
-            PreparedStatement stmt = connection.prepareStatement("DELETE FROM user WHERE id=?");
-            stmt.setLong(1, user.getId());
-            int i = stmt.executeUpdate();
+            conn = DataSourceFactory.getConnection();
+            preStmt = conn.prepareStatement(SQL_DELETE);
+            preStmt.setLong(1, user.getId());
+            int i = preStmt.executeUpdate();
             if(i == 1) {
                 return true;
             }
@@ -109,26 +126,29 @@ public class UserDaoImpl implements UserDao{
 
     @Override
     public Optional<User> findByUserData(String userName, String password){
-        try (Connection connection = DataSourceFactory.getConnection()){
-            PreparedStatement stmt = connection.prepareStatement("SELECT * FROM user WHERE user_name=? AND password=?");
-            stmt.setString(1, userName);
-            stmt.setString(2, password);
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()){
-                User user = new User(rs.getLong("id"), rs.getString("user_name"), rs.getString("password"));
+        try{
+            conn = DataSourceFactory.getConnection();
+            preStmt = conn.prepareStatement(SQL_FIND_USER_DATA);
+            preStmt.setString(1, userName);
+            preStmt.setString(2, password);
+            rs = preStmt.executeQuery();
+            if(rs.next()){
+                user = new User(rs.getLong("id"),
+                        rs.getString("user_name"),
+                        rs.getString("password"));
                 return Optional.of(user);
             }
         }catch (SQLException ex){
             ex.printStackTrace();
         }
-        return null;
-    }
-
-    private static class SingletonHelper{
-        private static final UserDaoImpl INSTANCE = new UserDaoImpl();
+        return Optional.empty();
     }
 
     public static UserDao getInstance(){
         return SingletonHelper.INSTANCE;
+    }
+
+    private static class SingletonHelper{
+        private static final UserDaoImpl INSTANCE = new UserDaoImpl();
     }
 }

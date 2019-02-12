@@ -1,8 +1,8 @@
 package com.mitrais.rms.controller;
 
-import com.mitrais.rms.dao.UserDao;
-import com.mitrais.rms.dao.impl.UserDaoImpl;
 import com.mitrais.rms.model.User;
+import com.mitrais.rms.service.UserService;
+import com.mitrais.rms.service.impl.UserServiceImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,83 +11,70 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-import java.util.Optional;
-import javax.servlet.http.HttpSession;
 
 @WebServlet("/users/*")
 public class UserServlet extends AbstractController{
+
+    private UserService USER_SERVICE = UserServiceImpl.getInstance();
+    private boolean result;
     
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) 
-            throws ServletException, IOException{        
-        HttpSession currSession = req.getSession(false);
-        if(currSession != null){
-            String path;
-            User userActive = (User) currSession.getAttribute("currentuser");
-            System.out.println("Current session: " + userActive.getUserName() + 
-                    " | " + userActive.getPassword());
-            path = getTemplatePath(req.getServletPath() + req.getPathInfo());
-            if ("/list".equalsIgnoreCase(req.getPathInfo())){
-                UserDao userDao = UserDaoImpl.getInstance();
-                List<User> users = userDao.findAll();
-                req.setAttribute("users", users);
-                RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
-                requestDispatcher.forward(req, res);
-            }else if("/form".equalsIgnoreCase(req.getPathInfo())){
-                Optional<User> data;
-                User user;
-                if(req.getParameter("id") == null){
-                    user = null;
-                }else{
-                    long id = Long.parseLong(req.getParameter("id"));
-                    UserDao userDao = UserDaoImpl.getInstance();
-                    data = userDao.find(id);
-                    user = data.get();
-                }
-                req.setAttribute("user", user);
-                RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
-                requestDispatcher.forward(req, res);
-            }else if("/delete".equalsIgnoreCase(req.getPathInfo())){
-                UserDao userDao = UserDaoImpl.getInstance();
+            throws ServletException, IOException{
+        String path = getTemplatePath(req.getServletPath() + req.getPathInfo());
+        if ("/list".equalsIgnoreCase(req.getPathInfo())){
+            List<User> users = USER_SERVICE.findAll();
+            req.setAttribute("users", users);
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
+            requestDispatcher.forward(req, res);
+        }else if("/form".equalsIgnoreCase(req.getPathInfo())){
+            User user;
+            if(req.getParameter("id") == null){
+                user = null;
+            }else{
                 long id = Long.parseLong(req.getParameter("id"));
-                String uname = req.getParameter("user");
-                String upass = req.getParameter("pass");
-                userDao.delete(new User(id, uname, upass));
-                res.sendRedirect("/rms-servlet-web/users/list");
+                user = USER_SERVICE.find(id);
             }
-        }else{
-            System.out.println("Current session has been expired !");
-            res.sendRedirect("/rms-servlet-web/");
+            req.setAttribute("user", user);
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
+            requestDispatcher.forward(req, res);
+        }else if("/delete".equalsIgnoreCase(req.getPathInfo())){
+            long id = Long.parseLong(req.getParameter("id"));
+            result = USER_SERVICE.delete(id);
+            if(result == true){
+                res.sendRedirect("/rms-servlet-web/users/list");
+            }else{
+                req.setAttribute("errorMessage", "Delete Process Failed !");
+            }
         }
     }
     
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) 
             throws ServletException, IOException{
-        HttpSession currSession = req.getSession(false);
-        if(currSession != null){
-            User userActive = (User) currSession.getAttribute("currentuser");
-            System.out.println("Current session: " + userActive.getUserName() + 
-                    " | " + userActive.getPassword());
-            if ("/form".equalsIgnoreCase(req.getPathInfo())){
-                UserDao userDao = UserDaoImpl.getInstance();
-                String button = req.getParameter("button");
-                String uname = req.getParameter("username");
-                String upass = req.getParameter("userpass");
-                switch(button){
-                    case "Create":
-                        userDao.save(new User(uname, upass));
-                        break;
-                    case "Update":
-                        long id = Long.parseLong(req.getParameter("id"));
-                        userDao.update(new User(id, uname, upass));
-                        break;
-                }
-                res.sendRedirect("/rms-servlet-web/users/list");
+        if ("/form".equalsIgnoreCase(req.getPathInfo())){
+            String button = req.getParameter("button");
+            String uname = req.getParameter("username");
+            String upass = req.getParameter("userpass");
+            switch(button){
+                case "Create":
+                    result = USER_SERVICE.save(uname, upass);
+                    if(result == true){
+                        res.sendRedirect("/rms-servlet-web/users/list");
+                    }else{
+                        req.setAttribute("errorMessage", "Create Process Failed !");
+                    }
+                    break;
+                case "Update":
+                    long id = Long.parseLong(req.getParameter("id"));
+                    result = USER_SERVICE.update(id, uname, upass);
+                    if(result == true){
+                        res.sendRedirect("/rms-servlet-web/users/list");
+                    }else{
+                        req.setAttribute("errorMessage", "Update Process Failed !");
+                    }
+                    break;
             }
-        }else{
-            System.out.println("Current session has been expired !");
-            res.sendRedirect("/rms-servlet-web/");
         }
     }
 }
