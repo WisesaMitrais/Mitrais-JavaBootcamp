@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import javax.servlet.ServletContext;
 
 @WebServlet("/users/*")
 public class UserServlet extends AbstractController{
@@ -42,7 +43,7 @@ public class UserServlet extends AbstractController{
             long id = Long.parseLong(req.getParameter("id"));
             result = USER_SERVICE.delete(id);
             if(result == true){
-                res.sendRedirect("/rms-servlet-web/users/list");
+                res.sendRedirect(getContextRoot() + "/users/list");
             }else{
                 req.setAttribute("errorMessage", "Delete Process Failed !");
             }
@@ -60,7 +61,7 @@ public class UserServlet extends AbstractController{
                 case "Create":
                     result = USER_SERVICE.save(uname, upass);
                     if(result == true){
-                        res.sendRedirect("/rms-servlet-web/users/list");
+                        res.sendRedirect(getContextRoot() + "/users/list");
                     }else{
                         req.setAttribute("errorMessage", "Create Process Failed !");
                     }
@@ -69,12 +70,17 @@ public class UserServlet extends AbstractController{
                     long id = Long.parseLong(req.getParameter("id"));
                     result = USER_SERVICE.update(id, uname, upass);
                     if(result == true){
-                        res.sendRedirect("/rms-servlet-web/users/list");
+                        res.sendRedirect(getContextRoot() + "/users/list");
                     }else{
                         req.setAttribute("errorMessage", "Update Process Failed !");
                     }
                     break;
             }
         }
+    }
+    
+    private String getContextRoot(){
+        ServletContext servletContext = getServletContext();
+        return servletContext.getContextPath();
     }
 }

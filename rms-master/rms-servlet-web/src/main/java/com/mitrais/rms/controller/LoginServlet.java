@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import javax.servlet.ServletContext;
 
 @WebServlet("/login")
 public class LoginServlet extends AbstractController{
@@ -34,12 +35,17 @@ public class LoginServlet extends AbstractController{
         if(isUserExist == true){
             HttpSession newSession = req.getSession(true);
             newSession.setAttribute("currentuser", new User(uname, upass));
-                res.sendRedirect("/rms-servlet-web/index.jsp");
+            res.sendRedirect(getContextRoot() + "/index.jsp");
         }else{
                 String path = getTemplatePath(req.getServletPath());
                 req.setAttribute("errorMessage", "Username or Password Incorrect !");
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
                 requestDispatcher.forward(req, res);
         }
+    }
+    
+    private String getContextRoot(){
+        ServletContext servletContext = getServletContext();
+        return servletContext.getContextPath();
     }
 }

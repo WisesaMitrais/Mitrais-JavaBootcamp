@@ -30,7 +30,7 @@ public class LoginFilter implements Filter {
             filterChain.doFilter(request, response);
         }else{
             System.out.println("Session expired !");
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/login");
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/");
             requestDispatcher.forward(req, response);
         }
     }
