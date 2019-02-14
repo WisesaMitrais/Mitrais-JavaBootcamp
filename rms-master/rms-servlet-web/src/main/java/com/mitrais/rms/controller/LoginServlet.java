@@ -16,7 +16,7 @@ import javax.servlet.ServletContext;
 @WebServlet("/login")
 public class LoginServlet extends AbstractController{
 
-    private final LoginService LOGIN_SERVICE = LoginServiceImpl.getInstance();
+    private final LoginService loginService = LoginServiceImpl.getInstance();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) 
@@ -31,7 +31,7 @@ public class LoginServlet extends AbstractController{
             throws ServletException, IOException{
         String uname = req.getParameter("username");
         String upass = req.getParameter("userpass");
-        boolean isUserExist = LOGIN_SERVICE.findUserData(uname, upass);
+        boolean isUserExist = loginService.findUserData(uname, upass);
         if(isUserExist == true){
             HttpSession newSession = req.getSession(true);
             newSession.setAttribute("currentuser", new User(uname, upass));

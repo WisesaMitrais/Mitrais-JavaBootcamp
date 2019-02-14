@@ -10,7 +10,6 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 @WebFilter(urlPatterns = "*")
 public class LoginFilter implements Filter {
@@ -26,10 +25,9 @@ public class LoginFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         boolean isUserActive = req.getSession().getAttribute("currentuser") != null;
         if(isUserActive){
-            System.out.println("Session New !");
             filterChain.doFilter(request, response);
         }else{
-            System.out.println("Session expired !");
+            req.setAttribute("errorMessage", "Session expired !");
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("/");
             requestDispatcher.forward(req, response);
         }

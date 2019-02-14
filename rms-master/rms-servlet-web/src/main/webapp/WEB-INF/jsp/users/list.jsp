@@ -19,6 +19,13 @@
 <body>
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100 box-center">
     	<main class="mdl-layout__content">
+            <% if(request.getAttribute("errorMessage") != null){ %>
+                <div class="mdl-card__actions" style="color: #FF0000;">${errorMessage}</div>
+            <% } %>
+            <% if(request.getAttribute("successMessage") != null){ %>
+                <div class="mdl-card__actions" style="color: #0000FF;">${successMessage}</div>
+            <% } %>
+            <div class="mdl-card__actions" style="color: #FF0000;">${errorMessage}</div>
             <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
                 <thead>
                     <tr>
@@ -42,9 +49,6 @@
                     </c:forEach>
                 </tbody>
             </table>
-            <% if(request.getAttribute("errorMessage") != null){ %>
-                <div class="mdl-card__actions" style="color: #FF0000;">${errorMessage}</div>
-            <% } %>
     	</main>
     </div>
     <script src="js/scripts.js"></script>

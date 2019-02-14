@@ -9,8 +9,12 @@ import java.util.Optional;
 
 public class LoginServiceImpl implements LoginService {
 
-    private UserDao userDao = UserDaoImpl.getInstance();
+    private final UserDao userDao = UserDaoImpl.getInstance();
 
+    private LoginServiceImpl() {
+        //nothing.
+    }
+    
     @Override
     public boolean findUserData(String username, String userpass) {
         Optional<User> user = userDao.findByUserData(username, userpass);

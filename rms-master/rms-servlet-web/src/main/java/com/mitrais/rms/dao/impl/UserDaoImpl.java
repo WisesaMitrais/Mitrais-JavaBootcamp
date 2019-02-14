@@ -27,12 +27,12 @@ public class UserDaoImpl implements UserDao{
     private User user;
 
     private UserDaoImpl() {
-        SQL_FIND = "SELECT * FROM rmsdb.user WHERE id=?";
-        SQL_FIND_ALL = "SELECT * FROM rmsdb.user";
-        SQL_SAVE = "INSERT INTO user VALUES (NULL, ?, ?)";
-        SQL_UPDATE = "UPDATE user SET user_name=?, password=? WHERE id=?";
-        SQL_DELETE = "DELETE FROM rmsdb.user WHERE id=?";
-        SQL_FIND_USER_DATA = "SELECT * FROM rmsdb.user WHERE user_name=? AND password=?";
+        SQL_FIND = "SELECT * FROM rmsdb.m_user WHERE id=?";
+        SQL_FIND_ALL = "SELECT * FROM rmsdb.m_user";
+        SQL_SAVE = "INSERT INTO m_user VALUES (NULL, ?, ?)";
+        SQL_UPDATE = "UPDATE m_user SET username=?, password=? WHERE id=?";
+        SQL_DELETE = "DELETE FROM rmsdb.m_user WHERE id=?";
+        SQL_FIND_USER_DATA = "SELECT * FROM rmsdb.m_user WHERE username=? AND password=?";
     }
 
     @Override
@@ -44,7 +44,7 @@ public class UserDaoImpl implements UserDao{
             rs = preStmt.executeQuery();
             if(rs.next()){
                 user = new User(rs.getLong("id"),
-                        rs.getString("user_name"),
+                        rs.getString("username"),
                         rs.getString("password"));
                 return Optional.of(user);
             }
@@ -63,7 +63,7 @@ public class UserDaoImpl implements UserDao{
             ResultSet rs = stmt.executeQuery(SQL_FIND_ALL);
             while(rs.next()){
                 user = new User(rs.getLong("id"),
-                        rs.getString("user_name"),
+                        rs.getString("username"),
                         rs.getString("password"));
                 users.add(user);
             }
@@ -113,7 +113,7 @@ public class UserDaoImpl implements UserDao{
         try{
             conn = DataSourceFactory.getConnection();
             preStmt = conn.prepareStatement(SQL_DELETE);
-            preStmt.setLong(1, user.getId());
+            preStmt.setLong(1, id);
             int i = preStmt.executeUpdate();
             if(i == 1) {
                 return true;
@@ -134,7 +134,7 @@ public class UserDaoImpl implements UserDao{
             rs = preStmt.executeQuery();
             if(rs.next()){
                 user = new User(rs.getLong("id"),
-                        rs.getString("user_name"),
+                        rs.getString("username"),
                         rs.getString("password"));
                 return Optional.of(user);
             }

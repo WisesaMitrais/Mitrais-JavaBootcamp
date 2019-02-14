@@ -50,16 +50,20 @@
                         </div>
                         <div class="mdl-card__actions">
                             <c:if test="${user == null}">
+                                <% if(request.getAttribute("errorMessage") != null){ %>
+                                    <div class="mdl-card__actions" style="color: #FF0000;">${errorMessage}</div>
+                                <% } %>
                                 <input type="submit" value="Create" class="mdl-button mdl-button--colored" name="button"/>
                             </c:if>
                             <c:if test="${user != null}">
+                                <% if(request.getAttribute("errorMessage") != null){ %>
+                                    <div class="mdl-card__actions" style="color: #FF0000;">${errorMessage}</div>
+                                <% } %>
+                                <div class="mdl-card__actions" style="color: #FF0000;">${errorMessage}</div>
                                 <input type="submit" value="Update" class="mdl-button mdl-button--colored" name="button"/>
                             </c:if>
                         </div>
                     </form>
-                    <% if(request.getAttribute("errorMessage") != null){ %>
-                        <div class="mdl-card__actions" style="color: #FF0000;">${errorMessage}</div>
-                    <% } %>
     		</div>
             </div>
     	</main>

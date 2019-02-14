@@ -16,36 +16,45 @@ import javax.servlet.ServletContext;
 @WebServlet("/users/*")
 public class UserServlet extends AbstractController{
 
-    private UserService USER_SERVICE = UserServiceImpl.getInstance();
+    private final UserService userService = UserServiceImpl.getInstance();
     private boolean result;
     
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) 
             throws ServletException, IOException{
+        System.out.println(req.getPathInfo());
         String path = getTemplatePath(req.getServletPath() + req.getPathInfo());
+        System.out.println(path);
         if ("/list".equalsIgnoreCase(req.getPathInfo())){
-            List<User> users = USER_SERVICE.findAll();
+            List<User> users = userService.findAll();
             req.setAttribute("users", users);
             RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
             requestDispatcher.forward(req, res);
-        }else if("/form".equalsIgnoreCase(req.getPathInfo())){
+        }else if(req.getPathInfo().startsWith("/form")){ //("/form".equalsIgnoreCase(req.getPathInfo())){
             User user;
             if(req.getParameter("id") == null){
                 user = null;
             }else{
                 long id = Long.parseLong(req.getParameter("id"));
-                user = USER_SERVICE.find(id);
+                user = userService.find(id);
             }
             req.setAttribute("user", user);
             RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
             requestDispatcher.forward(req, res);
         }else if("/delete".equalsIgnoreCase(req.getPathInfo())){
             long id = Long.parseLong(req.getParameter("id"));
-            result = USER_SERVICE.delete(id);
+            result = userService.delete(id);
             if(result == true){
-                res.sendRedirect(getContextRoot() + "/users/list");
+                req.setAttribute("successMessage", "Delete User Success.");
+//                res.sendRedirect(getContextRoot() +"/users/list");
+                path  =  getTemplatePath("/users/list");
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
+                requestDispatcher.forward(req, res);
             }else{
-                req.setAttribute("errorMessage", "Delete Process Failed !");
+                req.setAttribute("errorMessage", "Delete User Failed !");
+                path  =  getTemplatePath("/users/form?id=" + req.getParameter("id"));
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
+                requestDispatcher.forward(req, res);
             }
         }
     }
@@ -59,20 +68,35 @@ public class UserServlet extends AbstractController{
             String upass = req.getParameter("userpass");
             switch(button){
                 case "Create":
-                    result = USER_SERVICE.save(uname, upass);
+                    result = userService.save(uname, upass);
                     if(result == true){
-                        res.sendRedirect(getContextRoot() + "/users/list");
+                        req.setAttribute("successMessage", "Create User Success.");
+//                        res.sendRedirect(getContextRoot() + "/users/list");
+                        String path  =  getTemplatePath("/users/list");
+                        RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
+                        requestDispatcher.forward(req, res);
                     }else{
-                        req.setAttribute("errorMessage", "Create Process Failed !");
+                        req.setAttribute("errorMessage", "Create User Failed !");
+                        String path  =  getTemplatePath("/users/form");
+                        RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
+                        requestDispatcher.forward(req, res);
                     }
                     break;
                 case "Update":
                     long id = Long.parseLong(req.getParameter("id"));
-                    result = USER_SERVICE.update(id, uname, upass);
+                    result = userService.update(id, uname, upass);
                     if(result == true){
-                        res.sendRedirect(getContextRoot() + "/users/list");
+                        req.setAttribute("successMessage", "Update User Data Success.");
+//                        res.sendRedirect(getContextRoot() + "/users/list");
+                        String path  =  getTemplatePath("/users/list");
+                        RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
+                        requestDispatcher.forward(req, res);
                     }else{
-                        req.setAttribute("errorMessage", "Update Process Failed !");
+                        req.getSession().setAttribute("errorMessage", "Update User Data Failed !");
+//                        String path = getTemplatePath("/users/list");
+                        res.sendRedirect(getContextRoot() + "/users/list");
+//                        RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
+//                        requestDispatcher.forward(req, res);
                     }
                     break;
             }

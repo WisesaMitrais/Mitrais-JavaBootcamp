@@ -10,8 +10,12 @@ import java.util.Optional;
 
 public class UserServiceImpl implements UserService {
 
-    private UserDao userDao = UserDaoImpl.getInstance();
+    private final UserDao userDao = UserDaoImpl.getInstance();
     private User user;
+    
+    private UserServiceImpl() {
+        //nothing.
+    }
 
     @Override
     public User find(Long id) {
@@ -26,14 +30,24 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean save(String username, String userpass) {
-        user = new User(username, userpass);
-        return userDao.save(user);
+        if(username.equals("") || username == null || 
+                userpass.equals("") || userpass == null){
+            return false;
+        }else{
+            user = new User(username, userpass);
+            return userDao.save(user);
+        }
     }
 
     @Override
     public boolean update(Long id, String username, String userpass) {
-        user = new User(id, username, userpass);
-        return userDao.update(user);
+        if(username.equals("") || username == null || 
+                userpass.equals("") || userpass == null){
+            return false;
+        }else{
+            user = new User(id, username, userpass);
+            return userDao.update(user);
+        }
     }
 
     @Override
