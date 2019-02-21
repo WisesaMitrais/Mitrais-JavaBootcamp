@@ -148,7 +148,7 @@ Keypoints:
 23. Understand transaction demarcation management
 24. Able to implement bean-managed transactions (BMT)
 ## Module Spring Framework
-### Task Spring Core | 15/02/2019 - Now
+### Task Spring Core | 15/02/2019 - 20/02/2019 (5 days)
 1. What is dependency injection and what are the advantages?
 2. What is an interface and what are the advantages of making use of them in Java?
 3. What is meant by “application-context” and how do you create one?
@@ -199,3 +199,17 @@ Keypoints:
 48. If you saw one of the <context/> elements, would you know what it does?
 49. What is @Value used for?
 50. What is the difference between $ and # in @Value expressions?
+### Task Spring Boot | 21/02/2019 - Now
+1. What is Spring Boot?
+2. What are the advantages of using Spring Boot?
+3. Why is it “opinionated”?
+4. How does it work? How does it know what to configure?
+5. What things affect what Spring Boot sets up?
+6. How are properties defined? Where?
+7. Common Spring Boot annotations and configuration properties.
+8. What is the difference between an embedded container and a WAR?
+9. What embedded containers does Spring Boot support?
+10. What does @EnableAutoConfiguration do? What about @SpringBootApplication?
+11. What is a Spring Boot starter POM? Why is it useful?
+12. Spring Boot supports both Java properties and YML files. Would you recognize and understand them if you saw them?
+13. Can you control logging with Spring Boot? How?
