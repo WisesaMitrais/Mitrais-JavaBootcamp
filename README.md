@@ -199,7 +199,7 @@ Keypoints:
 48. If you saw one of the <context/> elements, would you know what it does?
 49. What is @Value used for?
 50. What is the difference between $ and # in @Value expressions?
-### Task Spring Boot | 21/02/2019 - Now
+### Task Spring Boot | 21/02/2019 - 27/02/2019
 1. What is Spring Boot?
 2. What are the advantages of using Spring Boot?
 3. Why is it “opinionated”?
@@ -213,3 +213,13 @@ Keypoints:
 11. What is a Spring Boot starter POM? Why is it useful?
 12. Spring Boot supports both Java properties and YML files. Would you recognize and understand them if you saw them?
 13. Can you control logging with Spring Boot? How?
+## Module Template Engine
+### Thymeleaf | 28/02/2019 - 01/03/2019
+1. Understand what is thymeleaf							
+2. Understand thymeleaf supported template mode							
+3. Understand thymeleaf dialect for spring							
+4. Able to configure thymeleaf in spring based application (DIalect, Views and View Resolvers)							
+5. Understand Spring Expression Language and Standard Expression Syntax for thymeleaf							
+6. Able to use thymeleaf tags							
+7. Able to use validation and error messages							
+8. Able to use template fragments
