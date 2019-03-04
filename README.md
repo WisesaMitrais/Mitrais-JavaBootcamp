@@ -199,7 +199,7 @@ Keypoints:
 48. If you saw one of the <context/> elements, would you know what it does?
 49. What is @Value used for?
 50. What is the difference between $ and # in @Value expressions?
-### Task Spring Boot | 21/02/2019 - 27/02/2019
+### Task Spring Boot | 21/02/2019 - 27/02/2019 (5 days)
 1. What is Spring Boot?
 2. What are the advantages of using Spring Boot?
 3. Why is it “opinionated”?
@@ -214,7 +214,7 @@ Keypoints:
 12. Spring Boot supports both Java properties and YML files. Would you recognize and understand them if you saw them?
 13. Can you control logging with Spring Boot? How?
 ## Module Template Engine
-### Thymeleaf | 28/02/2019 - 01/03/2019
+### Thymeleaf | 28/02/2019 - 01/03/2019 (2 days)
 1. Understand what is thymeleaf							
 2. Understand thymeleaf supported template mode							
 3. Understand thymeleaf dialect for spring							
@@ -223,3 +223,13 @@ Keypoints:
 6. Able to use thymeleaf tags							
 7. Able to use validation and error messages							
 8. Able to use template fragments
+## Module Spring Framework
+### Task Spring JDBC | 4/03/2019 - 6/03/2019 (3 days)
+1. How do you configure a DataSource in Spring? Which bean is very useful for development/test databases?
+2. What is the Template design pattern and what is the JDBC template?
+3. What is a callback? 
+4. What are the three JdbcTemplate callback interfaces? What are they used for?
+5. Can you execute a plain SQL statement with the JDBC template?
+6. Does the JDBC template acquire (and release) a connection for every method called or once per template?
+7. Is the JDBC template able to participate in an existing transaction?
+8. How does the JdbcTemplate support generic queries? How does it return objects and lists/maps of objects?
