@@ -233,7 +233,7 @@ Keypoints:
 6. Does the JDBC template acquire (and release) a connection for every method called or once per template?
 7. Is the JDBC template able to participate in an existing transaction?
 8. How does the JdbcTemplate support generic queries? How does it return objects and lists/maps of objects?
-### Task Spring ORM | 11/03/2019 - 13/03/2019 (3 days)
+### Task Spring ORM | 11/03/2019 - 12/03/2019 (2 days)
 1. How do you configure a DataSource in Spring? Which bean is very useful for development/test databases?
 2. What does JPA mean - what is ORM? What is the idea behind an ORM?
 3. What is a PersistenceContext and what is an EntityManager. What is the relationship between both?
@@ -246,3 +246,99 @@ Keypoints:
 10. What is an "instant repository"? (hint: recall Spring Data)
 11. How do you define an “instant” repository?
 12. What is @Query used for?
+### Task Spring MVC | 13/03/2019 - 18/03/2019 (4 days)
+1. MVC is an abbreviation for a design pattern. What does it stand for and what is the idea behind it?
+2. Do you need spring-mvc.jar in your classpath or is it part of spring-core?
+3. What is the DispatcherServlet and what is it used for?
+4. Is the DispatcherServlet instantiated via an application context?
+5. What is the root application context? How is it loaded?
+6. What is the @Controller annotation used for? How can you create a controller without an annotation?
+7. What is the ContextLoaderListener and what does it do?
+8. What are you going to do in the web.xml. Where do you place it?
+9. How is an incoming request mapped to a controller and mapped to a method?
+10. What is the @RequestParam used for?
+11. What are the differences between @RequestParam and @PathVariable?
+12. What are some of the valid return types of a controller method?
+13. What is a View and what's the idea behind supporting different types of View?
+14. How is the right View chosen when it comes to the rendering phase?
+15. What is the Model?
+16. Why do you have access to the model in your View? Where does it come from?
+17. What is the purpose of the session scope?
+18. What is the default scope in the web context?
+19. Why are controllers testable artifacts?
+20. What does the InternalResourceViewResolver do?
+21. What does REST stand for?
+22. What is a resource?
+23. What are safe REST operations?
+24. What are idempotent operations? Why is idempotency important?
+25. Is REST scalable and/or interoperable?
+26. What are the advantages of the RestTemplate?
+27. Which HTTP methods does REST use?
+28. What is an HttpMessageConverter?
+29. Is REST normally stateless?
+30. What does @RequestMapping do?
+31. Is @Controller a stereotype? Is @RestController a stereotype?
+32. What is the difference between @Controller and @RestController?
+33. When do you need @ResponseBody?
+34. What does @PathVariable do?
+35. What is the HTTP status return code for a successful DELETE statement?
+36. What does CRUD mean?
+37. Is REST secure? What can you do to secure it?
+38. Where do you need @EnableWebMVC?
+39. Name some common http response codes. When do you need @ResponseStatus?
+40. Does REST work with transport layer security (TLS)?
+41. Do you need Spring MVC in your classpath?
+### Task Spring AOP | 19/03/2019 - 21/03/2019 (3 days)
+1. What is the concept of AOP? Which problem does it solve?
+2. What is a pointcut, a join point, an advice, an aspect, weaving?
+3. How does Spring solve (implement) a cross cutting concern?
+4. Which are the limitations of the two proxy-types?
+5. How many advice types does Spring support. What are they used for?
+6. What do you have to do to enable the detection of the @Aspect annotation?
+7. Name three typical cross cutting concerns.
+8. What two problems arise if you don't solve a cross cutting concern via AOP?
+9. What does @EnableAspectJAutoProxy do?
+10. What is a named pointcut?
+11. How do you externalize pointcuts? What is the advantage of doing this?
+12. What is the JoinPoint argument used for?
+13. What is a ProceedingJoinPoint?
+14. What are the five advice types called?
+15. Which advice do you have to use if you would like to try and catch exceptions?
+16. What is the difference between @EnableAspectJAutoProxy and <aop:aspectjautoproxy>?
+### Task Spring Security | 22/03/2019 - 26/03/2019 (3 days)
+1. What is the delegating filter proxy?			
+2. What is the security filter chain?			
+3. In the notes several predefined filters were shown. Do you recall what they did and what order they occurred in?			
+4. Are you able to add and/or replace individual filters?			
+5. Is it enough to hide sections of my output (e.g. JSP-Page)?			
+6. Why do you need the intercept-url?			
+7. Why do you need method security? What type of object is typically secured at the method level (think of its purpose not its Java type).			
+8. Is security a cross cutting concern? How is it implemented internally?			
+9. What do @Secured and @RolesAllowed do? What is the difference between them?			
+10. What is a security context?			
+11. In which order do you have to write multiple intercept-url's?			
+12. How is a Principal defined?			
+13. What is authentication and authorization? Which must come first?			
+14. In which security annotation are you allowed to use SpEL?			
+15.Does Spring Security support password hashing? What is salting?
+### Task Spring Transaction | 27/03/2019 - 29/03/2019 (3 days)
+1. What is a transaction? What is the difference between a local and a global transaction?
+2. Is a transaction a cross cutting concern? How is it implemented in Spring?
+3. How are you going to set up a transaction in Spring?
+4. What does @Transactional do? What is the PlatformTransactionManager?
+5. What is the TransactionTemplate? Why would you use it?
+6. What is a transaction isolation level? How many do we have and how are they ordered?
+7. What is the difference between @EnableTransactionManagement and <tx:annotationdriven>?
+8. What does transaction propagation mean?
+9. What happens if one @Transactional annotated method is calling another @Transactional annotated method on the same object instance?
+10. Where can the @Transactional annotation be used? What is a typical usage if you put it at class level?
+11. What does declarative transaction management mean?
+12. What is the default rollback policy? How can you override it?
+13. What is the default rollback policy in a JUnit test, when you use the SpringJUnit4ClassRunner and annotate your @Test annotated method with @Transactional?
+14. Why is the term "unit of work" so important and why does JDBC AutoCommit violate this pattern?
+## Module Study Case
+### Task RMS Web App. with Spring & Thymeleaf | 1/04/2019 - 9/04/2019 (7 days)
+1. Able to implement MVC pattern using Spring MVC.
+2. Able to implement CRUD operation using Spring ORM (JPA).
+3. Able to secure web application using Spring Security(USER, ROLE).
+4. Able to create fatjar web application using Spring Boot.
