@@ -233,3 +233,16 @@ Keypoints:
 6. Does the JDBC template acquire (and release) a connection for every method called or once per template?
 7. Is the JDBC template able to participate in an existing transaction?
 8. How does the JdbcTemplate support generic queries? How does it return objects and lists/maps of objects?
+### Task Spring ORM | 11/03/2019 - 13/03/2019 (3 days)
+1. How do you configure a DataSource in Spring? Which bean is very useful for development/test databases?
+2. What does JPA mean - what is ORM? What is the idea behind an ORM?
+3. What is a PersistenceContext and what is an EntityManager. What is the relationship between both?
+4. Why do you need the @Entity annotation. Where can it be placed?
+5. What do you need to do in Spring if you would like to work with JPA?
+6. Are you able to participate in a given transaction in Spring while working with JPA?
+7. What is the PlatformTransactionManager?
+8. What does @PersistenceContext do?
+9. What are disadvantages or ORM? What are the benefits?
+10. What is an "instant repository"? (hint: recall Spring Data)
+11. How do you define an “instant” repository?
+12. What is @Query used for?
