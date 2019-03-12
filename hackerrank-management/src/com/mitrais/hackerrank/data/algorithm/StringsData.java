@@ -11,7 +11,7 @@ public class StringsData implements Data {
             11211, 11212, 11213, 11214, 11215, 11216, 11217, 11218, 11219, 11220,
             11221, 11222, 11223, 11224, 11225, 11226, 11227, 11228, 11229, 11230,
             11231, 11232, 11233, 11234, 11235, 11236, 11237, 11238, 11239, 11240,
-            11241, 11242, 11243, 11244, 11245);
+            11241, 11242, 11243, 11244, 11245, 11246);
     private final List<String> PROBLEM_NAME = Arrays.asList(
             "AL_SG_AlternatingCharacters", "AL_SG_Anagram", "AL_SG_AshtonAndString",
             "AL_SG_BearAndSteadyGene", "AL_SG_BeautifulBinaryString", "AL_SG_BuildAPalindrome",
@@ -27,7 +27,8 @@ public class StringsData implements Data {
             "AL_SG_SimilarStrings", "AL_SG_StringConstruction", "AL_SG_StringFunctionCalculation",
             "AL_SG_StringSimilarity", "AL_SG_SuperFunctionalStrings", "AL_SG_SuperReducedString",
             "AL_SG_TheLoveLetterMystery", "AL_SG_TwoCharacters", "AL_SG_TwoStrings",
-            "AL_SG_TwoStringsGame", "AL_SG_TwoTwo", "AL_SG_WeightedUniformStrings");
+            "AL_SG_TwoStringsGame", "AL_SG_TwoTwo", "AL_SG_WeightedUniformStrings",
+            "AL_SG_StrongPassword");
     private final String PROBLEM_TYPE = "Strings";
     private final String TYPE_INITIAL = "SG";
     private final String PROBLEM_CATEGORY = "Algorithm";

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/../rms-master/rms.iml" filepath="$PROJECT_DIR$/../rms-master/rms.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../rms-master/rms-servlet-web/rms-servlet-web.iml" filepath="$PROJECT_DIR$/../rms-master/rms-servlet-web/rms-servlet-web.iml" />
-    </modules>
-  </component>
-</project>
