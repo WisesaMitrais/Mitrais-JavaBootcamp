@@ -1,4 +1,4 @@
-# Mitrais-JavaBootcamp (October 2018 - Now)
+# Mitrais-JavaBootcamp (October 2018 - March 2019)
 This repository contain the result of exploring java technology within Mitrais java bootcamp.
 ## Module Java Fundamental 1
 ### Task Overview | 10/10/2018 (40 minutes)
